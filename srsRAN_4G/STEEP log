@@ -1,0 +1,54 @@
+Week 2:
+   Created steep_manager.h	in lib/include/srsran/common/
+   Created steep_manager.cpp	in lib/src/common/
+   modified CMakeLists.txt	in lib/src/common/
+      added steep_manager.cpp to set(SOURCES ...)
+      
+Week 3:
+   modified steep_manager.h	in lib/include/srsran/common/
+      added on_rx and on_tx function headers
+   modified steep_manager.cpp	in lib/src/common/
+      added on_rx and on_tx functions
+   modified radio.h		in lib/include/srsran/radio/
+      added steep_manager header file
+      added call to steep enabler
+      added steep manager object to the class
+   modified radio.cc		in lib/src/radio/
+      added check for STEEP is enabled in RX and TX paths
+      added line to forcibly enable steep for testing, line 226
+   created config files 	in .config/srsran
+      enb.conf  epc.conf  mbms.conf  rb.conf  rr.conf  sib.conf  ue.conf  user_db.csv
+      modified end.conf
+         all_level = info to all_level = debug lines 155 & 156
+         removed comments line 83 and 84
+      modified ue.conf
+         all_level = info to all_level = debug lines 120 & 121
+         removed comments line 45 and 46
+         
+Week 4:
+   modified steep_manager.h	in lib/include/srsran/common/
+      updated entire header to facilitate communication between Bob and Alice, added code to adjust for resampling
+   modified steep_manager.cpp	in lib/src/common/
+      updated entire class to facilitate communication between Bob and Alice, added code to adjust for resampling
+   modified radio.h		in lib/include/srsran/radio/
+      added code to determine if the object is bob or alice line 69
+   modified radio.cc		in lib/src/radio/
+      updated Rx and TX hooks
+   modified ue.cc		in srsue/src/
+      added role as Alice and steep enabler
+   modified enb.cc		in srsenb/src/
+      added role as Bob, steep enabler and a secret message
+
+
+For compiling and building, use:
+cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build
+make -j$(nproc) srsenb srsue
+
+For running test in the terminals, run:
+   terminal 1: sudo srsepc ~/.config/srsran/epc.conf
+   terminal 2: sudo /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsenb/src/srsenb ~/.config/srsran/enb.conf
+   terminal 3: sudo /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsue/src/srsue ~/.config/srsran/ue.conf
+
+Greps for enb and ue
+   grep STEEP /tmp/enb.log
+   grep STEEP /tmp/ue.log

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/include/srsran/srslog/context.h
+srsran/srslog/detail/support/tmp_utils.h
+../lib/include/srsran/srslog/srsran/srslog/detail/support/tmp_utils.h
+cassert
+-
+string
+-
+
+../lib/include/srsran/srslog/detail/support/tmp_utils.h
+cstddef
+-
+tuple
+-
+
+/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/lib/test/srslog/context_test.cpp
+srsran/srslog/context.h
+/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/lib/test/srslog/srsran/srslog/context.h
+testing_helpers.h
+/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/lib/test/srslog/testing_helpers.h
+vector
+-
+
+/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/lib/test/srslog/testing_helpers.h
+cstdio
+-
+
