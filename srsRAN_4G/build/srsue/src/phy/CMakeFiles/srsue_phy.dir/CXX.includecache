@@ -3046,18 +3046,6 @@ srsran/common/string_helpers.h
 srsran/srsran.h
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/srsran/srsran.h
 
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/cell_search.cc
-srsue/hdr/phy/nr/cell_search.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/srsue/hdr/phy/nr/cell_search.h
-srsran/common/band_helper.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/srsran/common/band_helper.h
-srsran/common/buffer_pool.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/srsran/common/buffer_pool.h
-srsran/radio/rf_buffer.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/srsran/radio/rf_buffer.h
-srsran/radio/rf_timestamp.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/srsran/radio/rf_timestamp.h
-
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/sf_worker.cc
 srsue/hdr/phy/nr/sf_worker.h
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/srsue/hdr/phy/nr/sf_worker.h
@@ -3067,10 +3055,6 @@ srsgui/srsgui.h
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/srsgui/srsgui.h
 semaphore.h
 -
-
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/slot_sync.cc
-srsue/hdr/phy/nr/slot_sync.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/srsue/hdr/phy/nr/slot_sync.h
 
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/nr/worker_pool.cc
 srsue/hdr/phy/nr/worker_pool.h
@@ -3118,17 +3102,9 @@ srsran/interfaces/phy_interface_types.h
 srsran/srsran.h
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/srsran/srsran.h
 
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/scell/intra_measure_base.cc
-srsue/hdr/phy/scell/intra_measure_base.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/scell/srsue/hdr/phy/scell/intra_measure_base.h
-
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/scell/intra_measure_lte.cc
 srsue/hdr/phy/scell/intra_measure_lte.h
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/scell/srsue/hdr/phy/scell/intra_measure_lte.h
-
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/scell/intra_measure_nr.cc
-srsue/hdr/phy/scell/intra_measure_nr.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/scell/srsue/hdr/phy/scell/intra_measure_nr.h
 
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsue/src/phy/scell/scell_recv.cc
 srsue/hdr/phy/scell/scell_recv.h

@@ -63,6 +63,12 @@ private:
   // State machine helpers
   bool valid_transition(steep_state_t from, steep_state_t to) const;
 
+  // Timing buffer
+  uint32_t tx_call_count_ = 0;
+
+  // Indicate echo phase complete
+  bool echo_done_ = false;
+
   // Mutex-free versions called from inside on_rx/on_tx (which already hold the lock)
   bool store_probe_locked(const steep_probe_t& probe);
   bool consume_probe_locked(uint32_t probe_id, steep_probe_t& out);

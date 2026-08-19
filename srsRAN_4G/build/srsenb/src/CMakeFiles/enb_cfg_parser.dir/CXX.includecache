@@ -4048,12 +4048,6 @@ srsgnb/hdr/stack/rrc/rrc_nr_config.h
 srsran/asn1/asn1_utils.h
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/srsran/asn1/asn1_utils.h
 
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/parser.cc
-srsenb/hdr/parser.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/srsenb/hdr/parser.h
-iostream
--
-
 lib/include/srsran/version.h
 srsran/config.h
 lib/include/srsran/srsran/config.h

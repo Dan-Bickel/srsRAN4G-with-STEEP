@@ -352,19 +352,7 @@ bool radio::rx_now(rf_buffer_interface& buffer, rf_timestamp_interface& rxd_time
   if (steep_enabled_) {
     srsran_timestamp_t* ts = rxd_time.get_ptr(0);
 
-// --- temporary diagnostic ---
-    cf_t* dbg_ptr = reinterpret_cast<cf_t*>(buffer.get(0));
-    if (dbg_ptr) {
-      float* dbg_f = reinterpret_cast<float*>(dbg_ptr);
-      logger.warning("STEEP DBG rx_now: ptr=%p nof_samples=%u s[0]=(%.4f,%.4f) s[1]=(%.4f,%.4f)",
-                     (void*)dbg_ptr,
-                     buffer.get_nof_samples(),
-                     dbg_f[0], dbg_f[1],   // real, imag of sample 0
-                     dbg_f[2], dbg_f[3]);  // real, imag of sample 1
-    } else {
-      logger.warning("STEEP DBG rx_now: buffer.get(0) is NULL");
-    }
-    // ----------------------------
+
 
     steep_mgr_.on_rx(
       reinterpret_cast<srsran::steep_manager::cf_t*>(buffer.get(0)),
@@ -625,13 +613,7 @@ bool radio::tx_dev(const uint32_t& device_idx, rf_buffer_interface& buffer, cons
     radio_buffers[i] = zeros.data();
   }
 
-  if (not map_channels(tx_channel_mapping, device_idx, sample_offset, buffer, radio_buffers)) {
-    logger.error("Mapping logical channels to physical channels for transmission");
-    return false;
-  }
-
-  /* === Moved to radio::tx
-
+  // STEEP TX hook - must be before map_channels so the probe enters radio_buffers
   if (steep_enabled_) {
     steep_mgr_.on_tx(
       reinterpret_cast<srsran::steep_manager::cf_t*>(buffer.get(0)),
@@ -641,20 +623,10 @@ bool radio::tx_dev(const uint32_t& device_idx, rf_buffer_interface& buffer, cons
     );
   }
 
-  */
-
-    /* OLD Implementations
-
-  if (steep_enabled_) {
-    steep_mgr_.on_tx(nof_samples, tx_time.full_secs, tx_time.frac_secs);
+  if (not map_channels(tx_channel_mapping, device_idx, sample_offset, buffer, radio_buffers)) {
+    logger.error("Mapping logical channels to physical channels for transmission");
+    return false;
   }
-
-  ========
-
-  if (steep_enabled_) {
-    steep_mgr_.on_tx(nof_samples, tx_time);
-  }
-  */
 
   int ret = srsran_rf_send_timed_multi(
       rf_device, radio_buffers, nof_samples, tx_time.full_secs, tx_time.frac_secs, true, is_start_of_burst, false);

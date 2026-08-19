@@ -228,6 +228,11 @@ void steep_manager::handle_tx_alice(cf_t* samples, uint32_t nof_samples)
 {
   if (handshake_done_)               return; // one-shot: call reset() to try again
   if (state_ != steep_state_t::IDLE) return;
+
+  // Wait ~5s for ZMQ link and LTE attach to complete before firing
+  // rx_now is called every 1ms (one subframe), so 5000 = 5 seconds
+  if (++tx_call_count_ < 5000)       return;
+
   if (nof_samples < frame_size_samples()) return;
 
   steep_probe_t probe;
@@ -280,6 +285,7 @@ void steep_manager::handle_rx_alice(const cf_t* samples, uint32_t nof_samples)
 
 void steep_manager::handle_rx_bob(const cf_t* samples, uint32_t nof_samples)
 {
+  if (echo_done_)                    return;
   if (state_ != steep_state_t::IDLE) return;
 
   uint32_t frame_size = frame_size_samples();
@@ -290,7 +296,7 @@ void steep_manager::handle_rx_bob(const cf_t* samples, uint32_t nof_samples)
     max_real = std::max(max_real, std::abs(samples[i].real()));
     max_imag = std::max(max_imag, std::abs(samples[i].imag()));
   }
-  logger_.info("STEEP [BOB]: max real=%f max imag=%f", max_real, max_imag);
+  logger_.debug("STEEP [BOB]: max real=%f max imag=%f", max_real, max_imag);
 
   // Slide through the buffer one bit-width at a time looking for the magic header
   for (uint32_t offset = 0; offset + frame_size <= nof_samples; offset += SAMPLES_PER_BIT) {
@@ -329,6 +335,7 @@ void steep_manager::handle_tx_bob(cf_t* samples, uint32_t nof_samples)
 
   encode_frame(samples, pending_echo_.probe_id, pending_echo_.payload);
   echo_ready_ = false;
+  echo_done_  = true;
   state_      = steep_state_t::IDLE;
   logger_.info("STEEP [BOB]: echo transmitted, id=%u", pending_echo_.probe_id);
 }

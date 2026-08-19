@@ -2116,14 +2116,6 @@ stdarg.h
 cassert
 -
 
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/lib/src/radio/channel_mapping.cc
-srsran/radio/channel_mapping.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/lib/src/radio/srsran/radio/channel_mapping.h
-srsran/phy/utils/debug.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/lib/src/radio/srsran/phy/utils/debug.h
-sstream
--
-
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/lib/src/radio/radio.cc
 srsran/radio/radio.h
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/lib/src/radio/srsran/radio/radio.h

@@ -2844,20 +2844,6 @@ srsran/srsran.h
 srsenb/hdr/phy/lte/worker_pool.h
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/lte/srsenb/hdr/phy/lte/worker_pool.h
 
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/nr/slot_worker.cc
-srsenb/hdr/phy/nr/slot_worker.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/nr/srsenb/hdr/phy/nr/slot_worker.h
-srsran/common/buffer_pool.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/nr/srsran/common/buffer_pool.h
-srsran/common/common.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/nr/srsran/common/common.h
-
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/nr/worker_pool.cc
-srsenb/hdr/phy/nr/worker_pool.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/nr/srsenb/hdr/phy/nr/worker_pool.h
-srsran/common/band_helper.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/nr/srsran/common/band_helper.h
-
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/phy.cc
 srsenb/hdr/phy/phy.h
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/srsenb/hdr/phy/phy.h
@@ -2891,18 +2877,6 @@ sstream
 -
 assert.h
 -
-
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/phy_ue_db.cc
-srsenb/hdr/phy/phy_ue_db.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/srsenb/hdr/phy/phy_ue_db.h
-
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/prach_worker.cc
-srsenb/hdr/phy/prach_worker.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/srsenb/hdr/phy/prach_worker.h
-srsran/interfaces/enb_mac_interfaces.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/srsran/interfaces/enb_mac_interfaces.h
-srsran/srsran.h
-/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/srsran/srsran.h
 
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/srsenb/src/phy/txrx.cc
 unistd.h
