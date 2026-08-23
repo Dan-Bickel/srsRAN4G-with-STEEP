@@ -38,6 +38,15 @@ Week 4:
       added role as Alice and steep enabler
    modified enb.cc		in srsenb/src/
       added role as Bob, steep enabler and a secret message
+      
+Week 5:
+   modified steep_manager.h in lib/include/srsran/common/
+      updated STEEP_AMP and added a 32-sample bipolar chip sequence
+         replaced majority-vote decoding with correlation-based decoding
+   modified steep_manager.cpp in lib/src/common/
+      updated encode_frame() to apply the chip sequence
+         replaced majority-vote decode_frame() with correlation detection and CRC validation
+      fixed TX buffer accumulation between probes
 
 
 For compiling and building, use:
@@ -49,6 +58,6 @@ For running test in the terminals, run:
    terminal 2: sudo /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsenb/src/srsenb ~/.config/srsran/enb.conf
    terminal 3: sudo /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsue/src/srsue ~/.config/srsran/ue.conf
 
-Greps for enb and ue
-   grep STEEP /tmp/enb.log
-   grep STEEP /tmp/ue.log
+Greps for enb and ue in terminal 4
+   grep "STEEP" /tmp/enb.log
+   grep "STEEP" /tmp/ue.log
