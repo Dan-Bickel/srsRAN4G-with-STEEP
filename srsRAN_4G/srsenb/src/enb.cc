@@ -135,12 +135,14 @@ int enb::init(const all_args_t& args_)
     nr_stack = std::move(tmp_nr_stack);
   }
 
+  /* OLD
   // STEEP - Bob configuration
   std::vector<uint8_t> secret = {
     'H','e','l','l','o',' ','f','r','o','m',' ','B','o','b','!',
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
   };
   tmp_radio->steep_set_secret(secret);
+  */
   tmp_radio->steep_set_role(false);   // srsenb = Bob
   tmp_radio->steep_enable(true);
 

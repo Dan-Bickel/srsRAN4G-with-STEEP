@@ -340,6 +340,7 @@ void steep_manager::handle_tx_alice(cf_t* samples, uint32_t nof_samples)
 
 void steep_manager::handle_rx_alice(const cf_t* samples, uint32_t nof_samples)
 {
+  /* OLD
   // Diagnostic: confirm RX is running and check for STEEP signal energy
   static uint32_t alice_rx_count = 0;
   ++alice_rx_count;
@@ -352,6 +353,7 @@ void steep_manager::handle_rx_alice(const cf_t* samples, uint32_t nof_samples)
                     rx_alice_accum_buf_.size(), nof_samples,
                     max_imag, STEEP_AMP * 0.5f);
   }
+  */
 
   if (state_ != steep_state_t::PROBING) return;
 
@@ -392,11 +394,15 @@ void steep_manager::handle_rx_alice(const cf_t* samples, uint32_t nof_samples)
     char buf[4];
     for (auto b : recovered) { snprintf(buf, sizeof(buf), "%02x ", b); hex += buf; }
 
+    std::string ascii;
+    for (auto b : recovered)
+      ascii += (b >= 32 && b < 127) ? static_cast<char>(b) : '.';
+
     ++probes_recovered_;
     float rate = probes_sent_ > 0 ? (100.0f * probes_recovered_ / probes_sent_) : 0.0f;
 
-    logger_.warning("STEEP [ALICE]: *** SECRET RECOVERED id=%u offset=%u accum=%zu: %s***",
-                    probe_id, offset, rx_alice_accum_buf_.size(), hex.c_str());
+    logger_.warning("STEEP [ALICE]: *** SECRET RECOVERED id=%u offset=%u accum=%zu | ASCII: \"%s\" | HEX: %s***",
+                    probe_id, offset, rx_alice_accum_buf_.size(), ascii.c_str(), hex.c_str());
     logger_.warning("STEEP [ALICE]: stats: sent=%u recovered=%u timed_out=%u success_rate=%.1f%%",
                     probes_sent_, probes_recovered_, probes_timed_out_, rate);
 
@@ -409,12 +415,14 @@ void steep_manager::handle_rx_alice(const cf_t* samples, uint32_t nof_samples)
 
 void steep_manager::handle_rx_bob(const cf_t* samples, uint32_t nof_samples)
 {
+  /* Diagnostic OLD
   static uint32_t bob_rx_count = 0;
   ++bob_rx_count;
   if (bob_rx_count == 1 || bob_rx_count % 500 == 0) {
     logger_.warning("STEEP [BOB] DIAGNOSTIC: on_rx call #%u nof_samples=%u accum=%zu state=%d echoes=%u",
                     bob_rx_count, nof_samples, rx_accum_buf_.size(), (int)state_, echoes_sent_);
   }
+  */
 
   if (state_ != steep_state_t::IDLE) return;
 
@@ -453,10 +461,14 @@ void steep_manager::handle_rx_bob(const cf_t* samples, uint32_t nof_samples)
     probe.probe_id = probe_id;
     probe.payload  = payload;
 
-    if (secret_.size() == payload_size_)
-      mix_secret_locked(probe, secret_);
-    else
-      logger_.warning("STEEP [BOB]: no secret set or wrong size — echoing unmodified");
+    char msg[33] = {};
+    snprintf(msg, sizeof(msg), "Probe #%04u from Bob!", probe_id);
+    std::vector<uint8_t> dynamic_secret(payload_size_, 0);
+    size_t msg_len = strlen(msg);
+    for (size_t i = 0; i < payload_size_ && i < msg_len; i++)
+      dynamic_secret[i] = static_cast<uint8_t>(msg[i]);
+    mix_secret_locked(probe, dynamic_secret);
+    logger_.warning("STEEP [BOB]: encoding secret for id=%u: \"%s\"", probe_id, msg);
 
     pending_echo_ = probe;
     echo_ready_   = true;
@@ -469,17 +481,6 @@ void steep_manager::handle_rx_bob(const cf_t* samples, uint32_t nof_samples)
                         rx_accum_buf_.begin() + offset + frame_size);
     return;
   }
-
-  /* Diagnostic tool
-  if (bob_rx_count % 500 == 0 && rx_accum_buf_.size() >= frame_size) {
-    float max_imag = 0.0f;
-    for (const auto& s : rx_accum_buf_)
-      max_imag = std::max(max_imag, std::abs(s.imag()));
-
-    logger_.warning("STEEP [BOB]: scan complete, no probe found. accum=%zu max_imag=%.1f need>%.1f",
-                    rx_accum_buf_.size(), max_imag, STEEP_AMP * 0.5f);
-  }
-  */
 }
 
 void steep_manager::handle_tx_bob(cf_t* samples, uint32_t nof_samples)

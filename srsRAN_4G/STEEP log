@@ -48,10 +48,18 @@ Week 5:
          replaced majority-vote decode_frame() with correlation detection and CRC validation
       fixed TX buffer accumulation between probes
 
+Week 6:
+   modified steep_manager.cpp in lib/src/common/
+      removed obsolete RX diagnostic logging
+      added ASCII decoding to SECRET RECOVERED logs
+      added unique per-probe secret generation for testing
+   modified enb.cc in srsenb/src/
+      removed hardcoded secret message
 
 For compiling and building, use:
 cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build
-make -j$(nproc) srsenb srsue
+make -j$(nproc) srsenb srsue 2>&1 | tail -10
+sudo rm -f /tmp/enb.log /tmp/ue.log
 
 For running test in the terminals, run:
    terminal 1: sudo srsepc ~/.config/srsran/epc.conf
