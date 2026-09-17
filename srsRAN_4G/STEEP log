@@ -55,6 +55,38 @@ Week 6:
       added unique per-probe secret generation for testing
    modified enb.cc in srsenb/src/
       removed hardcoded secret message
+      
+Week 7:
+   modified steep_manager.cpp in lib/src/common/
+      deleted duplicate logger line in handle_rx_bob — "preamble detected, gain=%.2e, probe buffered (N=%u) — echo queued" was printing twice per detection
+      added Phase-2 noise block in handle_rx_alice — applied AWGN to echo body before probe subtraction (reverted, see radio.cc note)
+
+   modified steep_manager.h in lib/include/srsran/common/
+      added set_phase2_snr_db() and disable_phase2_noise() method declarations
+      added phase2_noise_enabled_ and phase2_snr_db_ private members
+      all Phase-2 additions reverted — see radio.cc note
+
+   modified radio.cc in lib/src/radio/
+      deleted duplicate STEEP TX hook from tx_dev() — on_tx was being called twice per transmission cycle, once in radio::tx() and once in radio::tx_dev() which tx() calls internally
+   modified radio.h in lib/include/srsran/radio/
+      added steep_set_phase2_snr_db() wrapper forwarding to steep_mgr_ (reverted)
+   modified ue.cc in srsue/src/
+      added tmp_radio->steep_set_phase2_snr_db(20.0f) after steep_enable(true) (reverted)
+   modified steep_summarize.py in project root
+      added hex field parsing from recovery log lines to access actual recovered bytes
+      added expected_secret_bytes() to reconstruct the expected 32-byte secret per probe ID
+      added count_bit_errors_region() for Hamming distance across the 21-byte message region only
+      added recovery quality classification — exact (0 errors), near-correct (1–2), garbled (>2)
+      added Recovery Accuracy section to output — counts, percentages, BER, MSE_A by category, worst garbled table
+      added Secrecy Rate section to output — reads Rs from --rs flag or /tmp/steep_eve_rs.txt
+      added argparse for CLI — replaces raw sys.argv
+      added fallback regex for recovery lines without HEX field
+   modified steep_eve_offline.py in eve/
+      changed ALICE_ECHO_SNR_DB from 30.0 to 20.0 then reverted to 30.0 (Path B — equal Phase-2 model)
+      changed EVE_PHASE2_SNR_DB from 30.0 to 26.0 then reverted to 30.0 (Path B — equal Phase-2 model)
+      updated banner to describe the equal Phase-2 model and its purpose
+      updated plot titles to reflect the equal Phase-2 model
+      added Rs file writer — saves Rs at natural position to /tmp/steep_eve_rs.txt after each run
 
 For compiling and building, use:
 cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build
