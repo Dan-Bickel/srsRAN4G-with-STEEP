@@ -613,16 +613,6 @@ bool radio::tx_dev(const uint32_t& device_idx, rf_buffer_interface& buffer, cons
     radio_buffers[i] = zeros.data();
   }
 
-  // STEEP TX hook - must be before map_channels so the probe enters radio_buffers
-  if (steep_enabled_) {
-    steep_mgr_.on_tx(
-      reinterpret_cast<srsran::steep_manager::cf_t*>(buffer.get(0)),
-      nof_samples,
-      tx_time.full_secs,
-      tx_time.frac_secs
-    );
-  }
-
   if (not map_channels(tx_channel_mapping, device_idx, sample_offset, buffer, radio_buffers)) {
     logger.error("Mapping logical channels to physical channels for transmission");
     return false;

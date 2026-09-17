@@ -9,15 +9,17 @@
 ../lib/include/srsran/common/steep_manager.h
 array
 -
+chrono
+-
 complex
 -
 cstdint
 -
+cstdio
+-
 mutex
 -
-set
--
-chrono
+random
 -
 vector
 -
@@ -213,10 +215,10 @@ srsran/srslog/shared_types.h
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/lib/src/common/steep_manager.cpp
 srsran/common/steep_manager.h
 /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/lib/src/common/srsran/common/steep_manager.h
+cmath
+-
 cstdio
 -
-cstdlib
--
-algorithm
+cstring
 -
 

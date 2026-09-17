@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/eve/steep_eve.cpp
+algorithm
+-
+cmath
+-
+complex
+-
+cstdint
+-
+cstdio
+-
+cstdlib
+-
+cstring
+-
+map
+-
+random
+-
+string
+-
+vector
+-
+

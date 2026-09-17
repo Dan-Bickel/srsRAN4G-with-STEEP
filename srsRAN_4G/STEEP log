@@ -58,8 +58,9 @@ Week 6:
 
 For compiling and building, use:
 cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build
-make -j$(nproc) srsenb srsue 2>&1 | tail -10
-sudo rm -f /tmp/enb.log /tmp/ue.log
+sudo rm /tmp/steep_alice_probe.iq /tmp/steep_bob_echo.iq
+cmake --build ~/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build -- -j$(nproc)
+
 
 For running test in the terminals, run:
    terminal 1: sudo srsepc ~/.config/srsran/epc.conf
@@ -69,3 +70,14 @@ For running test in the terminals, run:
 Greps for enb and ue in terminal 4
    grep "STEEP" /tmp/enb.log
    grep "STEEP" /tmp/ue.log
+   
+   python3 ~/Documents/Github-Desktop/srsRAN4G-with-STEEP/steep_summarize.py /tmp/ue.log /tmp/enb.log
+      Run this after: sudo truncate -s 0 /tmp/ue.log /tmp/enb.log
+      
+How to build eve:
+   cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP
+   cd eve && mkdir -p build && cd build
+   cmake .. && make
+   
+   Run after capture session:
+      ./steep_eve --p1 40,30,20,10,0,-10 --p2 40,30,20,10,0,-10 > results.tsv

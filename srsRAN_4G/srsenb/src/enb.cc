@@ -145,6 +145,12 @@ int enb::init(const all_args_t& args_)
   */
   tmp_radio->steep_set_role(false);   // srsenb = Bob
   tmp_radio->steep_enable(true);
+  tmp_radio->steep_set_phase1_snr_db(20.0f);
+
+  tmp_radio->steep_set_capture(true);   // writes /tmp/steep_bob_echo.iq
+
+  // tmp_radio->steep_set_phase1_snr_db(20.0f); // uncomment to degrade Bob's Phase-1
+  // tmp_radio->steep_set_rng_seed(42);          // fixed seed for reproducible noise
 
   phy     = std::move(tmp_phy);
   radio   = std::move(tmp_radio);

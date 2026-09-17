@@ -72,6 +72,11 @@ public:
   }
   void steep_set_secret(const std::vector<uint8_t>& s) { steep_mgr_.set_secret(s); }
 
+  void steep_set_capture(bool en)            { steep_mgr_.set_capture_enabled(en); }
+  void steep_set_phase1_snr_db(float snr)    { steep_mgr_.set_phase1_snr_db(snr); }
+  void steep_disable_phase1_noise()          { steep_mgr_.disable_phase1_noise(); }
+  void steep_set_rng_seed(uint32_t seed)     { steep_mgr_.set_rng_seed(seed); }
+
   // ==== PHY interface ===
 
   // trx functions
