@@ -116,7 +116,7 @@ void steep_manager::set_rng_seed(uint32_t seed)
     rng_seed_ = seed;
   }
   rng_.seed(rng_seed_);
-  logger_.warning("STEEP: AWGN RNG seeded with %u (%s)",
+  logger_.warning("STEEP: RNG seeded with %u (%s)",
                   rng_seed_, seed == 0 ? "random" : "fixed");
 }
 
@@ -203,23 +203,6 @@ float steep_manager::estimate_gain(const cf_t* rx_preamble) const
   return (gain > 0.01f) ? gain : 0.01f;
 }
 
-// ── AWGN injection (must be called under mtx_) ────────────────────────────────
-
-void steep_manager::add_awgn(cf_t* samples, uint32_t n, float snr_db)
-{
-  float signal_power = 0.0f;
-  for (uint32_t i = 0; i < n; i++)
-    signal_power += std::norm(samples[i]);
-  signal_power /= static_cast<float>(n);
-  if (signal_power == 0.0f) return;
-
-  const float noise_power = signal_power / std::pow(10.0f, snr_db / 10.0f);
-  const float noise_std   = std::sqrt(noise_power / 2.0f);
-  std::normal_distribution<float> dist(0.0f, noise_std);
-  for (uint32_t i = 0; i < n; i++)
-    samples[i] += cf_t(dist(rng_), dist(rng_));
-}
-
 // ── IQ capture ────────────────────────────────────────────────────────────────
 
 void steep_manager::write_capture_frame(FILE*& fp, const char* path,
@@ -244,6 +227,7 @@ void steep_manager::close_capture_files()
 {
   if (probe_capture_fp_) { fclose(probe_capture_fp_); probe_capture_fp_ = nullptr; }
   if (echo_capture_fp_)  { fclose(echo_capture_fp_);  echo_capture_fp_  = nullptr; }
+  if (bob_rx_capture_fp_) { fclose(bob_rx_capture_fp_); bob_rx_capture_fp_ = nullptr; }
 }
 
 // ── Alice TX ─────────────────────────────────────────────────────────────────
@@ -309,12 +293,12 @@ void steep_manager::handle_tx_alice(cf_t* samples, uint32_t nof_samples)
     samples[i] = cf_t(samples[i].real(),
                       static_cast<float>(PREAMBLE_CHIP[i]) * STEEP_AMP);
 
-  // Probe body: uniform random values in [−STEEP_AMP, +STEEP_AMP].
+  // Probe body: random BPSK, each sample is +STEEP_AMP or -STEEP_AMP (P-STEEP, M=2).
   // Stored as (0, v) complex so .imag() gives the scalar probe value.
-  std::uniform_real_distribution<float> probe_dist(-STEEP_AMP, STEEP_AMP);
+  std::bernoulli_distribution probe_bit(0.5);
   alice_probe_buf_.resize(PROBE_LEN);
   for (uint32_t i = 0; i < PROBE_LEN; i++) {
-    const float v     = probe_dist(rng_);
+    const float v     = probe_bit(rng_) ? STEEP_AMP : -STEEP_AMP;
     alice_probe_buf_[i]         = cf_t(0.0f, v);
     samples[PREAMBLE_LEN + i]   = cf_t(samples[PREAMBLE_LEN + i].real(), v);
   }
@@ -415,7 +399,7 @@ void steep_manager::handle_rx_alice(const cf_t* samples, uint32_t nof_samples)
   for (uint32_t i = 0; i < decode_len; i++) {
     const float rx_q   = y2[i].imag();
     const float x1_q   = alice_probe_buf_[i].imag();         // Alice's known probe
-    const float resid  = rx_q - alice_gain_est_ * C1 * x1_q;
+    const float resid  = rx_q * x1_q;   // = G*C1*b*x1^2, so sign(resid) = secret bit b
     // BPSK threshold: positive residual → bit 1, negative → bit 0.
     const int   bit_val = (resid >= 0.0f) ? 1 : 0;
     const uint32_t byte_idx = i / 8u;
@@ -489,10 +473,6 @@ void steep_manager::handle_rx_bob(const cf_t* samples, uint32_t nof_samples)
 
   if (state_ != steep_state_t::IDLE) return;
 
-  // Append to accumulator (using the potentially-noisy copy for detection,
-  // but the original samples for gain estimation and probe buffering).
-  // We keep two views: rx_accum_buf_ always holds the source-of-truth received
-  // samples; noisy scanning happens against a per-call-local view.
   rx_accum_buf_.insert(rx_accum_buf_.end(), samples, samples + nof_samples);
   if (rx_accum_buf_.size() > RX_ACCUM_MAX) {
     const uint32_t trim =
@@ -503,81 +483,31 @@ void steep_manager::handle_rx_bob(const cf_t* samples, uint32_t nof_samples)
                          ? rx_bob_search_pos_ - trim : 0u;
   }
 
-  // Build the noisy accumulator for scanning.
-  // Rather than maintaining a separate noisy ring buffer (complex and memory-
-  // heavy), apply noise only when enabled by re-running on the clean accumulator.
-  // This is affordable: phase-1 noise is a research dial, not a hot path.
-  std::vector<cf_t> scan_buf;
-  const std::vector<cf_t>* scan_ptr;
-  if (phase1_noise_enabled_) {
-    scan_buf = rx_accum_buf_;
-    add_awgn(scan_buf.data(), static_cast<uint32_t>(scan_buf.size()), phase1_snr_db_);
-    scan_ptr = &scan_buf;
-  } else {
-    scan_ptr = &rx_accum_buf_;
-  }
-
-  if (scan_ptr->size() < FRAME_LEN) return;
+  if (rx_accum_buf_.size() < FRAME_LEN) return;
 
   uint32_t offset = 0;
-  if (!detect_preamble(*scan_ptr, rx_bob_search_pos_, offset)) {
-    if (scan_ptr->size() >= FRAME_LEN)
-      rx_bob_search_pos_ =
-          static_cast<uint32_t>(scan_ptr->size()) - FRAME_LEN + 1u;
+  if (!detect_preamble(rx_accum_buf_, rx_bob_search_pos_, offset)) {
+    rx_bob_search_pos_ =
+        static_cast<uint32_t>(rx_accum_buf_.size()) - FRAME_LEN + 1u;
     return;
   }
 
   if (offset + FRAME_LEN > rx_accum_buf_.size()) return;
 
-  // ── Gain estimation (from the CLEAN accumulator) ──────────────────────────
+  // ── Gain estimation ───────────────────────────────────────────────────────
   gain_estimate_ = estimate_gain(rx_accum_buf_.data() + offset);
   logger_.info("STEEP [BOB]: preamble at offset=%u, gain=%.2e", offset, gain_estimate_);
 
-  // ── Store gain-normalised probe body ──────────────────────────────────
-  // When phase-1 noise is enabled, Bob's received probe y₁ = x₁ + w₁.
-  // The noise w₁ must be forwarded in the echo (AF model requirement).
-  // This is what creates the irreducible MSE floor that protects Alice
-  // even when Eve has a perfect Phase-1 channel — Eve receives w₁ in
-  // the echo but cannot separate it from the secret.
+  // ── Store gain-normalised probe body: y1_norm = y1 / G_hat ────────────────
   bob_probe_buf_.resize(PROBE_LEN);
-  if (phase1_noise_enabled_) {
-    // Extract probe body from clean accumulator, then add AWGN calibrated to
-    // Q-channel power only. The I channel carries LTE uplink which is much
-    // stronger than the STEEP Q signal — using total I²+Q² power via add_awgn
-    // would flood Q with noise calibrated to LTE level, not STEEP level.
-    std::vector<cf_t> noisy_probe(PROBE_LEN);
-    for (uint32_t i = 0; i < PROBE_LEN; i++)
-      noisy_probe[i] = rx_accum_buf_[offset + PREAMBLE_LEN + i];
-
-    float q_power = 0.0f;
-    for (uint32_t i = 0; i < PROBE_LEN; i++)
-      q_power += noisy_probe[i].imag() * noisy_probe[i].imag();
-    q_power /= static_cast<float>(PROBE_LEN);
-
-    if (q_power > 0.0f) {
-      const float noise_power = q_power / std::pow(10.0f, phase1_snr_db_ / 10.0f);
-      const float noise_std   = std::sqrt(noise_power);
-      std::normal_distribution<float> dist_q(0.0f, noise_std);
-      for (uint32_t i = 0; i < PROBE_LEN; i++)
-        noisy_probe[i] = cf_t(noisy_probe[i].real(),
-                              noisy_probe[i].imag() + dist_q(rng_));
-    }
-
-    for (uint32_t i = 0; i < PROBE_LEN; i++) {
-      const float y1_i = noisy_probe[i].imag() / gain_estimate_;
-      bob_probe_buf_[i] = cf_t(0.0f, y1_i);
-    }
-  } else {
-    const cf_t* y1_start = rx_accum_buf_.data() + offset + PREAMBLE_LEN;
-    for (uint32_t i = 0; i < PROBE_LEN; i++) {
-      const float y1_i = y1_start[i].imag() / gain_estimate_;
-      bob_probe_buf_[i] = cf_t(0.0f, y1_i);
-    }
+  const cf_t* y1_start = rx_accum_buf_.data() + offset + PREAMBLE_LEN;
+  for (uint32_t i = 0; i < PROBE_LEN; i++) {
+    const float y1_i = y1_start[i].imag() / gain_estimate_;
+    bob_probe_buf_[i] = cf_t(0.0f, y1_i);
   }
   logger_.warning("STEEP [BOB]: preamble detected, gain=%.2e, "
-                  "probe buffered (N=%u, w1_noise=%s) — echo queued",
-                  gain_estimate_, PROBE_LEN,
-                  phase1_noise_enabled_ ? "YES" : "no");
+                  "probe buffered (N=%u) — echo queued",
+                  gain_estimate_, PROBE_LEN);
 
   bob_probe_id_ = echoes_sent_ + 1u;  // log label; increment happens at TX
 
@@ -608,56 +538,48 @@ void steep_manager::handle_tx_bob(cf_t* samples, uint32_t nof_samples)
   if (nof_samples < FRAME_LEN) return;
   if (bob_probe_buf_.size() < PROBE_LEN) return;
 
-  // Build dynamic secret (same as the original DF implementation).
-  char msg[64] = {};
-  snprintf(msg, sizeof(msg), "Probe #%04u from Bob!", bob_probe_id_);
-  std::vector<uint8_t> secret_bytes(payload_size_, 0u);
-  const size_t msg_len = strlen(msg);
-  for (size_t i = 0; i < payload_size_ && i < msg_len; i++)
-    secret_bytes[i] = static_cast<uint8_t>(msg[i]);
-
-  logger_.warning("STEEP [BOB]: encoding secret: \"%s\"", msg);
-
-  // Serialise secret bytes to per-sample BPSK chips (MSB first).
-  const uint32_t n_secret_samples = payload_size_ * 8u;   // one sample per bit
-  std::vector<float> s2_bpsk(PROBE_LEN, 0.0f);
-  for (uint32_t i = 0; i < n_secret_samples && i < PROBE_LEN; i++) {
-    const uint32_t byte_idx = i / 8u;
-    const uint32_t bit_pos  = 7u - (i % 8u);
-    const int      bit      = (secret_bytes[byte_idx] >> bit_pos) & 1u;
-    s2_bpsk[i] = bit ? BPSK_AMP : -BPSK_AMP;
-  }
+  // P-STEEP secret: one random BPSK sign (+1 / -1) per probe slot.
+  std::bernoulli_distribution secret_bit(0.5);
+  std::vector<float> s_sign(PROBE_LEN);
+  for (uint32_t i = 0; i < PROBE_LEN; i++)
+    s_sign[i] = secret_bit(rng_) ? 1.0f : -1.0f;
 
   // Clear imaginary channel for the echo frame region.
   for (uint32_t i = 0; i < FRAME_LEN; i++)
     samples[i] = cf_t(samples[i].real(), 0.0f);
 
-  // Preamble (Bob uses the same known pattern so Alice can detect the echo).
+  // Preamble (same known pattern so Alice can detect the echo).
   generate_preamble(samples);
 
-  // Probe body: x2[i] = C1 * y1_norm[i] + C2 * s2[i]
+  // Probe body: x2[i] = C1 * s[i] * y1_norm[i]
+  // Multiplicative sign flip of Bob's soft probe estimate (no hard decision).
   for (uint32_t i = 0; i < PROBE_LEN; i++) {
     const float y1_norm = bob_probe_buf_[i].imag();
-    const float x2      = C1 * y1_norm + C2 * s2_bpsk[i];
+    const float x2      = C1 * s_sign[i] * y1_norm;
     samples[PREAMBLE_LEN + i] = cf_t(samples[PREAMBLE_LEN + i].real(), x2);
   }
 
   if (capture_enabled_) {
+    // What Bob received (gain-normalised probe y1_norm): used offline to pair
+    // echoes with Alice's probes and to validate the clean chain.
+    write_capture_frame(bob_rx_capture_fp_, "/tmp/steep_bob_rx.iq",
+                        2u, bob_probe_id_, bob_probe_buf_.data(), PROBE_LEN);
+    // What Bob transmitted (preamble + echo body).
     write_capture_frame(echo_capture_fp_, "/tmp/steep_bob_echo.iq",
                         1u, bob_probe_id_, samples, FRAME_LEN);
     logger_.info("STEEP capture: echo #%u saved", bob_probe_id_);
   }
 
-  echo_ready_          = false;
+  echo_ready_           = false;
   echo_cooldown_active_ = true;
-  last_echo_time_      = clock_t::now();
+  last_echo_time_       = clock_t::now();
   rx_accum_buf_.clear();
-  rx_bob_search_pos_   = 0u;
+  rx_bob_search_pos_    = 0u;
   ++echoes_sent_;
   state_ = steep_state_t::IDLE;
 
-  logger_.warning("STEEP [BOB]: echo transmitted (C1=%.2f C2=%.2f gain=%.2e total_echoes=%u)",
-                  C1, C2, gain_estimate_, echoes_sent_);
+  logger_.warning("STEEP [BOB]: echo transmitted (C1=%.2f gain=%.2e total_echoes=%u)",
+                  C1, gain_estimate_, echoes_sent_);
 }
 
 // ── on_tx / on_rx ─────────────────────────────────────────────────────────────

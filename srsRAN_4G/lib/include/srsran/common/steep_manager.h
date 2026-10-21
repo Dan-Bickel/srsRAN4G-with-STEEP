@@ -63,25 +63,19 @@ public:
   bool init(const std::array<uint8_t, 32>& session_key);
   void reset();
 
-  // Role and optional secret override (Bob generates its secret dynamically,
-  // so set_secret is not required but kept for API compatibility).
-  void set_role(steep_role_t role)                    { role_ = role; }
+  void set_role(steep_role_t role) {
+    role_ = role;
+    // Alice and Bob must NOT share an RNG seed: if they did, Bob's secret bits
+    // would equal Alice's probe signs and the echo would reveal itself.
+    rng_.seed(role == steep_role_t::BOB ? 4242u : 42u);
+  }
   void set_secret(const std::vector<uint8_t>& secret) { secret_ = secret; }
   void set_payload_size(uint32_t n)                   { payload_size_ = n; }
 
   // IQ capture (call in ue.cc to record Alice's probe and echo for Eve).
   void set_capture_enabled(bool en) { capture_enabled_ = en; }
 
-  // Phase-1 noise (Bob): simulate a noisier Alice→Bob leg by adding AWGN
-  // to a local copy of received samples before preamble detection.
-  // The original buffer passed to the LTE stack is never modified.
-  void set_phase1_snr_db(float snr_db) {
-    phase1_snr_db_        = snr_db;
-    phase1_noise_enabled_ = true;
-  }
-  void disable_phase1_noise() { phase1_noise_enabled_ = false; }
-
-  // AWGN RNG seed.  seed=0 → non-deterministic; seed≠0 → fixed (default 42).
+  // RNG seed (drives Alice's random probe).  seed=0 → non-deterministic; seed≠0 → fixed (default 42).
   void set_rng_seed(uint32_t seed);
 
   steep_state_t get_state() const;
@@ -120,9 +114,6 @@ private:
   void handle_rx_alice(const cf_t* samples, uint32_t nof_samples);
   void handle_rx_bob  (const cf_t* samples, uint32_t nof_samples);
   void handle_tx_bob  (cf_t* samples, uint32_t nof_samples);
-
-  // ── AWGN helper (must be called under mtx_; rng_ is not thread-safe) ────────
-  void add_awgn(cf_t* samples, uint32_t n, float snr_db);
 
   // ── IQ capture ──────────────────────────────────────────────────────────────
   void write_capture_frame(FILE*& fp, const char* path,
@@ -188,10 +179,7 @@ private:
   uint32_t capture_frames_written_ = 0u;
   FILE*    probe_capture_fp_       = nullptr;   // /tmp/steep_alice_probe.iq
   FILE*    echo_capture_fp_        = nullptr;   // /tmp/steep_bob_echo.iq
-
-  // ── Phase-1 noise (Bob) ──────────────────────────────────────────────────────
-  bool  phase1_noise_enabled_ = false;
-  float phase1_snr_db_        = 20.0f;
+  FILE*    bob_rx_capture_fp_      = nullptr;   // /tmp/steep_bob_rx.iq
 
   // ── RNG ──────────────────────────────────────────────────────────────────────
   uint32_t     rng_seed_ = 42u;
