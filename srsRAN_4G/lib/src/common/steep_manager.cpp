@@ -228,6 +228,14 @@ void steep_manager::close_capture_files()
   if (probe_capture_fp_) { fclose(probe_capture_fp_); probe_capture_fp_ = nullptr; }
   if (echo_capture_fp_)  { fclose(echo_capture_fp_);  echo_capture_fp_  = nullptr; }
   if (bob_rx_capture_fp_) { fclose(bob_rx_capture_fp_); bob_rx_capture_fp_ = nullptr; }
+  if (x1_capture_fp_) { fclose(x1_capture_fp_); x1_capture_fp_ = nullptr; }
+  if (s2_capture_fp_) { fclose(s2_capture_fp_); s2_capture_fp_ = nullptr; }
+  if (x1_unit_capture_fp_) { fclose(x1_unit_capture_fp_); x1_unit_capture_fp_ = nullptr; }
+  if (s2_unit_capture_fp_) { fclose(s2_unit_capture_fp_); s2_unit_capture_fp_ = nullptr; }
+  if (x1_full_capture_fp_)      { fclose(x1_full_capture_fp_);      x1_full_capture_fp_      = nullptr; }
+  if (x1_full_unit_capture_fp_) { fclose(x1_full_unit_capture_fp_); x1_full_unit_capture_fp_ = nullptr; }
+  if (s2_full_capture_fp_)      { fclose(s2_full_capture_fp_);      s2_full_capture_fp_      = nullptr; }
+  if (s2_full_unit_capture_fp_) { fclose(s2_full_unit_capture_fp_); s2_full_unit_capture_fp_ = nullptr; }
 }
 
 // ── Alice TX ─────────────────────────────────────────────────────────────────
@@ -318,6 +326,46 @@ void steep_manager::handle_tx_alice(cf_t* samples, uint32_t nof_samples)
     write_capture_frame(probe_capture_fp_, "/tmp/steep_alice_probe.iq",
                         0u, alice_probe_id_, samples, FRAME_LEN);
     ++capture_frames_written_;
+
+    // x1 alone: preamble + probe, pure STEEP samples (I = 0, no LTE).
+    std::vector<cf_t> x1_clean(FRAME_LEN);
+    for (uint32_t i = 0; i < PREAMBLE_LEN; i++)
+      x1_clean[i] = cf_t(0.0f, static_cast<float>(PREAMBLE_CHIP[i]) * STEEP_AMP);
+    for (uint32_t i = 0; i < PROBE_LEN; i++)
+      x1_clean[PREAMBLE_LEN + i] = alice_probe_buf_[i];
+    write_capture_frame(x1_capture_fp_, "/tmp/steep_x1.iq",
+                        3u, alice_probe_id_, x1_clean.data(), FRAME_LEN);
+    
+    // Same signal, unit amplitude (+/-1).
+    std::vector<cf_t> x1_unit(FRAME_LEN);
+    for (uint32_t i = 0; i < PREAMBLE_LEN; i++)
+      x1_unit[i] = cf_t(0.0f, static_cast<float>(PREAMBLE_CHIP[i]));
+    for (uint32_t i = 0; i < PROBE_LEN; i++)
+      x1_unit[PREAMBLE_LEN + i] = cf_t(0.0f, alice_probe_buf_[i].imag() > 0.0f ? 1.0f : -1.0f);
+    write_capture_frame(x1_unit_capture_fp_, "/tmp/steep_x1_unit.iq",
+                        5u, alice_probe_id_, x1_unit.data(), FRAME_LEN);
+
+
+    // Full I/Q version (saved only, NOT transmitted): the transmitted probe stays
+    // on Q; an independent +/-A probe is generated for I.
+    std::bernoulli_distribution i_bit(0.5);
+    std::vector<cf_t> x1_full(FRAME_LEN), x1_full_unit(FRAME_LEN);
+    for (uint32_t i = 0; i < PREAMBLE_LEN; i++) {
+      const float c = static_cast<float>(PREAMBLE_CHIP[i]);
+      x1_full[i]      = cf_t(c * STEEP_AMP, c * STEEP_AMP);
+      x1_full_unit[i] = cf_t(c, c);
+    }
+    for (uint32_t i = 0; i < PROBE_LEN; i++) {
+      const float q  = alice_probe_buf_[i].imag();
+      const float iv = i_bit(rng_) ? STEEP_AMP : -STEEP_AMP;
+      x1_full[PREAMBLE_LEN + i]      = cf_t(iv, q);
+      x1_full_unit[PREAMBLE_LEN + i] = cf_t(iv > 0.0f ? 1.0f : -1.0f,
+                                            q  > 0.0f ? 1.0f : -1.0f);
+    }
+    write_capture_frame(x1_full_capture_fp_, "/tmp/steep_x1_full.iq",
+                        7u, alice_probe_id_, x1_full.data(), FRAME_LEN);
+    write_capture_frame(x1_full_unit_capture_fp_, "/tmp/steep_x1_full_unit.iq",
+                        8u, alice_probe_id_, x1_full_unit.data(), FRAME_LEN);
   }
 }
 
@@ -567,6 +615,46 @@ void steep_manager::handle_tx_bob(cf_t* samples, uint32_t nof_samples)
     // What Bob transmitted (preamble + echo body).
     write_capture_frame(echo_capture_fp_, "/tmp/steep_bob_echo.iq",
                         1u, bob_probe_id_, samples, FRAME_LEN);
+
+    // s2 alone: preamble + secret signs, pure STEEP samples (I = 0).
+    // (Amplitude is STEEP_AMP; only the sign carries the secret bit.)
+    std::vector<cf_t> s2_clean(FRAME_LEN);
+    for (uint32_t i = 0; i < PREAMBLE_LEN; i++)
+      s2_clean[i] = cf_t(0.0f, static_cast<float>(PREAMBLE_CHIP[i]) * STEEP_AMP);
+    for (uint32_t i = 0; i < PROBE_LEN; i++)
+      s2_clean[PREAMBLE_LEN + i] = cf_t(0.0f, s_sign[i] * STEEP_AMP);
+    write_capture_frame(s2_capture_fp_, "/tmp/steep_s2.iq",
+                        4u, bob_probe_id_, s2_clean.data(), FRAME_LEN);
+    
+    // Same signal, unit amplitude (+/-1).
+    std::vector<cf_t> s2_unit(FRAME_LEN);
+    for (uint32_t i = 0; i < PREAMBLE_LEN; i++)
+      s2_unit[i] = cf_t(0.0f, static_cast<float>(PREAMBLE_CHIP[i]));
+    for (uint32_t i = 0; i < PROBE_LEN; i++)
+      s2_unit[PREAMBLE_LEN + i] = cf_t(0.0f, s_sign[i]);
+    write_capture_frame(s2_unit_capture_fp_, "/tmp/steep_s2_unit.iq",
+                        6u, bob_probe_id_, s2_unit.data(), FRAME_LEN);
+
+                        
+    // Full I/Q version (saved only, NOT transmitted): the secret stays on Q;
+    // an independent +/-A secret is generated for I.
+    std::bernoulli_distribution i_bit(0.5);
+    std::vector<cf_t> s2_full(FRAME_LEN), s2_full_unit(FRAME_LEN);
+    for (uint32_t i = 0; i < PREAMBLE_LEN; i++) {
+      const float c = static_cast<float>(PREAMBLE_CHIP[i]);
+      s2_full[i]      = cf_t(c * STEEP_AMP, c * STEEP_AMP);
+      s2_full_unit[i] = cf_t(c, c);
+    }
+    for (uint32_t i = 0; i < PROBE_LEN; i++) {
+      const float iv = i_bit(rng_) ? STEEP_AMP : -STEEP_AMP;
+      s2_full[PREAMBLE_LEN + i]      = cf_t(iv, s_sign[i] * STEEP_AMP);
+      s2_full_unit[PREAMBLE_LEN + i] = cf_t(iv > 0.0f ? 1.0f : -1.0f, s_sign[i]);
+    }
+    write_capture_frame(s2_full_capture_fp_, "/tmp/steep_s2_full.iq",
+                        9u, bob_probe_id_, s2_full.data(), FRAME_LEN);
+    write_capture_frame(s2_full_unit_capture_fp_, "/tmp/steep_s2_full_unit.iq",
+                        10u, bob_probe_id_, s2_full_unit.data(), FRAME_LEN);
+
     logger_.info("STEEP capture: echo #%u saved", bob_probe_id_);
   }
 

@@ -1,0 +1,537 @@
+2026-11-04T04:56:40.568591 [UE     ] [I] Using binary /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsue/src/srsue with arguments: /home/daniel-linix/.config/srsran/ue.conf 
+2026-11-04T04:56:40.599705 [UE     ] [I] Built in Release mode using commit 4194552 on branch offline_testing.
+2026-11-04T04:56:40.622750 [STEEP  ] [I] [    0] STEEP manager constructed (AF analog model)
+2026-11-04T04:56:40.718004 [STEEP  ] [W] [    0] STEEP: role=node-1 RNG seed=2228370279
+2026-11-04T04:56:42.087861 [STEEP  ] [W] [    0] STEEP [ALICE]: timing initialized, FRAME_LEN=1088 nof_samples=11520
+2026-11-04T04:56:42.534858 [GW     ] [E] Reach end of NETLINK message without finding IPv6 address.
+2026-11-04T04:56:42.534864 [GW     ] [W] Could not find link-local IPv6 address.
+2026-11-04T04:56:47.089734 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=1998 state=0 sent=0 recovered=0 timed_out=0
+2026-11-04T04:56:47.089765 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #1 transmitted, N=1024 samples (sent=1 recovered=0)
+2026-11-04T04:56:47.089829 [STEEP  ] [W] [    0] STEEP capture: opened '/tmp/steep_alice_probe.iq'
+2026-11-04T04:56:47.089891 [STEEP  ] [W] [    0] STEEP capture: opened '/tmp/steep_x1.iq'
+2026-11-04T04:56:47.089931 [STEEP  ] [W] [    0] STEEP capture: opened '/tmp/steep_x1_unit.iq'
+2026-11-04T04:56:47.118985 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:47.119002 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#1 offset=54016 | ASCII: "G{..X.I;..`=......ub9...5&T.C+.." | HEX: 47 7b b3 a2 58 f2 49 3b 90 ca 60 3d a8 8b 15 9a e1 8b 75 62 39 ed f5 f0 35 26 54 91 43 2b a8 f3 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:47.119003 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=1 recovered=1 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:48.090676 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #2 transmitted, N=1024 samples (sent=2 recovered=1)
+2026-11-04T04:56:48.138469 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:48.138484 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#2 offset=54016 | ASCII: ".....^.I..(...:uQ-..Mp"..T...od." | HEX: 2e 9a 07 1f d0 5e 94 49 01 8d 28 8b a9 0a 3a 75 51 2d c6 b7 4d 70 22 06 15 54 cc f7 11 6f 64 9d | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:48.138485 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=2 recovered=2 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:49.091719 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #3 transmitted, N=1024 samples (sent=3 recovered=2)
+2026-11-04T04:56:49.140569 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:49.140584 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#3 offset=54016 | ASCII: "R.3p*L..}08.FY.xe..."n......7..." | HEX: 52 d4 33 70 2a 4c 16 bc 7d 30 38 01 46 59 c3 78 65 06 91 0c 22 6e a6 b6 8b e4 a3 b9 37 bf a1 82 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:49.140585 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=3 recovered=3 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:50.092379 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #4 transmitted, N=1024 samples (sent=4 recovered=3)
+2026-11-04T04:56:50.144406 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:50.144420 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#4 offset=54016 | ASCII: ".xg/....C...$...7c?....W..ubs.L)" | HEX: 19 78 67 2f e2 a8 b3 a7 43 a0 e6 d7 24 b4 d7 11 37 63 3f fa ef 99 9b 57 9a aa 75 62 73 e3 4c 29 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:50.144421 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=4 recovered=4 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:51.093476 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #5 transmitted, N=1024 samples (sent=5 recovered=4)
+2026-11-04T04:56:51.146744 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:51.146758 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#5 offset=54016 | ASCII: "...N.y.j..*E.....'.!r....7.m...r" | HEX: 13 ab a7 4e bd 79 de 6a ac 13 2a 45 da 1c f4 04 e9 27 92 21 72 16 fc d3 1a 37 14 6d 97 c9 1b 72 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:51.146758 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=5 recovered=5 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:52.090121 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=6341 state=0 sent=5 recovered=5 timed_out=0
+2026-11-04T04:56:52.094599 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #6 transmitted, N=1024 samples (sent=6 recovered=5)
+2026-11-04T04:56:52.150024 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:52.150039 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#6 offset=54016 | ASCII: "..q.}i.]Pr6-.h_..6e;.m..pt.A.E)." | HEX: 0d d9 71 af 7d 69 9a 5d 50 72 36 2d 85 68 5f e2 98 36 65 3b d7 6d e0 da 70 74 08 41 0e 45 29 08 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:52.150039 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=6 recovered=6 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:53.095276 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #7 transmitted, N=1024 samples (sent=7 recovered=6)
+2026-11-04T04:56:53.153740 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:53.153761 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#7 offset=54016 | ASCII: "n....TIT...D#L=k......mi....gdL." | HEX: 6e fd 0c df 04 54 49 54 b9 9c b9 44 23 4c 3d 6b ff 11 b3 b2 c6 19 6d 69 ae ed be cb 67 64 4c fc | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:53.153762 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=7 recovered=7 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:54.096141 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #8 transmitted, N=1024 samples (sent=8 recovered=7)
+2026-11-04T04:56:54.155900 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:54.155915 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#8 offset=54016 | ASCII: "{U......2zH..s3.u;.R......O..W.." | HEX: 7b 55 b3 a2 f4 9f a8 b4 32 7a 48 d6 c2 73 33 ec 75 3b dc 52 cb ee e7 9d f4 93 4f fd cf 57 0e 15 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:54.155916 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=8 recovered=8 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:55.096755 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #9 transmitted, N=1024 samples (sent=9 recovered=8)
+2026-11-04T04:56:55.158189 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:55.158203 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#9 offset=54016 | ASCII: "...v...(1....)K..A..9Hl..k.[w..." | HEX: 03 9a e4 76 19 18 b4 28 31 e3 87 a9 ab 29 4b d0 ab 41 9a ee 39 48 6c f2 18 6b 0f 5b 77 ed c6 13 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:55.158204 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=9 recovered=9 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:56.096762 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #10 transmitted, N=1024 samples (sent=10 recovered=9)
+2026-11-04T04:56:56.160514 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:56.160527 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#10 offset=54016 | ASCII: ":..$.T.Hg..f_................y.." | HEX: 3a 9c af 24 92 54 be 48 67 16 98 66 5f f6 cb 97 0c bf 2e e5 a6 a7 a8 0c 99 de ea 2e c7 79 af dc | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:56.160528 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=10 recovered=10 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:57.090911 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=10623 state=0 sent=10 recovered=10 timed_out=0
+2026-11-04T04:56:57.097812 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #11 transmitted, N=1024 samples (sent=11 recovered=10)
+2026-11-04T04:56:57.164736 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:57.164751 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#11 offset=54016 | ASCII: "2...V$..nl`K..x..Y..o..P{&2R...." | HEX: 32 ae 92 c1 56 24 cf cf 6e 6c 60 4b 0a ed 78 0b 8f 59 10 1c 6f c3 b7 50 7b 26 32 52 10 bd 1c ba | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:57.164751 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=11 recovered=11 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:58.098150 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #12 transmitted, N=1024 samples (sent=12 recovered=11)
+2026-11-04T04:56:58.167080 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:58.167094 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#12 offset=54016 | ASCII: "O..!.X...G....3l.ZVIN.`......=:f" | HEX: 4f 10 e4 21 c8 58 ed 9a cc 47 b3 1b e2 b1 33 6c c3 5a 56 49 4e de 60 c6 88 ad 89 eb c7 3d 3a 66 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:58.167095 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=12 recovered=12 timed_out=0 success_rate=100.0%
+2026-11-04T04:56:59.099192 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #13 transmitted, N=1024 samples (sent=13 recovered=12)
+2026-11-04T04:56:59.169874 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:56:59.169889 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#13 offset=54016 | ASCII: "z.^.....((.G.v.H............CU.." | HEX: 7a 8a 5e d9 01 ff e3 81 28 28 db 47 2e 76 ca 48 b2 90 8a cc 8d 80 cd 88 ff a3 9a d9 43 55 a0 f0 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:56:59.169889 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=13 recovered=13 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:00.099840 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #14 transmitted, N=1024 samples (sent=14 recovered=13)
+2026-11-04T04:57:00.171759 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:00.171773 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#14 offset=54016 | ASCII: "IV..._oz?@.........B..`.f5.mc..." | HEX: 49 56 0c 0e f9 5f 6f 7a 3f 40 c6 f8 a4 ac e1 f0 89 cc 1b 42 b3 b0 60 1a 66 35 7f 6d 63 dc 9d 1a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:00.171773 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=14 recovered=14 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:01.099955 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #15 transmitted, N=1024 samples (sent=15 recovered=14)
+2026-11-04T04:57:01.173511 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:01.173526 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#15 offset=54016 | ASCII: "96..).!..>B&.e.......D..Iz.G.up<" | HEX: 39 36 ed f9 29 09 21 a2 cb 3e 42 26 17 65 0a cc dc 9b ad a8 f0 44 b2 9b 49 7a 0a 47 e3 75 70 3c | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:01.173526 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=15 recovered=15 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:02.091038 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=14908 state=0 sent=15 recovered=15 timed_out=0
+2026-11-04T04:57:02.100036 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #16 transmitted, N=1024 samples (sent=16 recovered=15)
+2026-11-04T04:57:02.176324 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:02.176339 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#16 offset=54016 | ASCII: "id.K>.v...rD.g\u.......tH......m" | HEX: 69 64 8f 4b 3e a3 76 1d 83 90 72 44 1f 67 5c 75 83 c2 13 c7 97 da 9e 74 48 c2 b1 a4 a8 1a b7 6d | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:02.176340 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=16 recovered=16 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:03.100637 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #17 transmitted, N=1024 samples (sent=17 recovered=16)
+2026-11-04T04:57:03.177235 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:03.177248 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#17 offset=54016 | ASCII: ").rw&X...=.....Y_...F.........j." | HEX: 29 ca 72 77 26 58 0e 91 1d 3d 91 b4 e9 da bd 59 5f 12 d4 e3 46 0d c7 c3 01 c1 dc d2 a0 2e 6a fe | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:03.177248 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=17 recovered=17 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:04.101601 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #18 transmitted, N=1024 samples (sent=18 recovered=17)
+2026-11-04T04:57:04.185528 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:04.185542 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#18 offset=54016 | ASCII: "'..{..K;y...'s...<.@...[.`s..?q." | HEX: 27 9a 93 7b b0 cb 4b 3b 79 d8 80 10 27 73 00 01 c9 3c e8 40 7f bc cf 5b b0 60 73 d9 cf 3f 71 8a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:04.185542 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=18 recovered=18 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:05.102082 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #19 transmitted, N=1024 samples (sent=19 recovered=18)
+2026-11-04T04:57:05.189569 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:05.189584 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#19 offset=54016 | ASCII: "d;f..........].p.+........=..LjG" | HEX: 64 3b 66 f9 7f d7 04 05 e5 cf 06 db 98 5d 02 70 fb 2b 80 9e b5 02 0d c7 0a 8b 3d 0f d4 4c 6a 47 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:05.189585 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=19 recovered=19 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:06.103191 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #20 transmitted, N=1024 samples (sent=20 recovered=19)
+2026-11-04T04:57:06.191480 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:06.191496 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#20 offset=54016 | ASCII: "cY.*...5(;.).g.,...M..Qf...y..?(" | HEX: 63 59 e3 2a e5 d5 00 35 28 3b f9 29 08 67 82 2c e3 2e 10 4d a8 11 51 66 fb c4 91 79 fa e6 3f 28 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:06.191496 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=20 recovered=20 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:07.091228 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=19168 state=0 sent=20 recovered=20 timed_out=0
+2026-11-04T04:57:07.103624 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #21 transmitted, N=1024 samples (sent=21 recovered=20)
+2026-11-04T04:57:07.195355 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:07.195370 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#21 offset=54016 | ASCII: "...a+A...c~\.z~..h..|..q/....@.." | HEX: 1b 9c f2 61 2b 41 e9 ff 11 63 7e 5c ca 7a 7e 1e a8 68 80 97 7c f7 f6 71 2f 90 9d 10 b8 40 8f e0 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:07.195370 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=21 recovered=21 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:08.104618 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #22 transmitted, N=1024 samples (sent=22 recovered=21)
+2026-11-04T04:57:08.198975 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:08.198990 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#22 offset=54016 | ASCII: "!.(.^..Jk.....18...X.!.&..X.0..." | HEX: 21 97 28 91 5e 9a b8 4a 6b 02 c2 be 01 c8 31 38 18 b5 bc 58 d7 21 8f 26 c1 ee 58 a0 30 96 8e 8d | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:08.198991 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=22 recovered=22 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:09.104707 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #23 transmitted, N=1024 samples (sent=23 recovered=22)
+2026-11-04T04:57:09.202918 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:09.202932 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#23 offset=54016 | ASCII: "-.n..................h.....}.g{." | HEX: 2d df 6e 11 d3 d5 fd 90 c6 e4 e1 8c fa b8 05 b3 09 e1 19 c3 f8 68 b4 08 cf d6 bb 7d 9f 67 7b b1 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:09.202933 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=23 recovered=23 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:10.105175 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #24 transmitted, N=1024 samples (sent=24 recovered=23)
+2026-11-04T04:57:10.205485 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:10.205500 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#24 offset=54016 | ASCII: "..H..>s....\.N%......U.......#RM" | HEX: 12 8b 48 a8 d8 3e 73 d4 88 01 d5 5c ea 4e 25 fb cd e4 fc db 16 55 ce cb 2e 85 b3 fb 03 23 52 4d | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:10.205500 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=24 recovered=24 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:11.105335 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #25 transmitted, N=1024 samples (sent=25 recovered=24)
+2026-11-04T04:57:11.209658 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:11.209673 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#25 offset=54016 | ASCII: "~=..1......\=.......Ag;....s6..." | HEX: 7e 3d ef ff 31 97 0c 97 cd df d2 5c 3d 9b 16 1d f5 bb dc e4 41 67 3b e6 e6 a5 d6 73 36 1b 9d b6 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:11.209674 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=25 recovered=25 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:12.091729 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=23389 state=0 sent=25 recovered=25 timed_out=0
+2026-11-04T04:57:12.106259 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #26 transmitted, N=1024 samples (sent=26 recovered=25)
+2026-11-04T04:57:12.212664 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:12.212679 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#26 offset=54016 | ASCII: ".eS.R.........D..s.Cl...2......%" | HEX: 0f 65 53 e5 52 f5 80 aa 08 f1 f2 c2 9a b8 44 b1 a7 73 13 43 6c d0 09 c0 32 e9 f3 dd 91 da fe 25 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:12.212679 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=26 recovered=26 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:13.106660 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #27 transmitted, N=1024 samples (sent=27 recovered=26)
+2026-11-04T04:57:13.216775 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:13.216789 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#27 offset=54016 | ASCII: ".....!,uD.z.&.'...sQ(.(........h" | HEX: 0e f7 00 b6 0d 21 2c 75 44 88 7a 10 26 d8 27 18 a9 c2 73 51 28 ba 28 ac 9e 90 87 93 8e f4 0a 68 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:13.216790 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=27 recovered=27 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:14.107058 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #28 transmitted, N=1024 samples (sent=28 recovered=27)
+2026-11-04T04:57:14.220217 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:14.220231 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#28 offset=54016 | ASCII: "{..{<..29,..}c.....YuI/g.......?" | HEX: 7b b8 98 7b 3c 87 d8 32 39 2c b1 e7 7d 63 fa b0 1c d8 e1 59 75 49 2f 67 d0 8b cb f7 86 c7 94 3f | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:14.220231 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=28 recovered=28 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:15.107593 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #29 transmitted, N=1024 samples (sent=29 recovered=28)
+2026-11-04T04:57:15.223969 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:15.223985 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#29 offset=54016 | ASCII: "?.N...w...R..1.... .t'....b..J.B" | HEX: 3f 81 4e 13 cc b4 77 ad ae fe 52 d4 b0 31 e6 f9 de bf 20 8d 74 27 85 e4 d7 ad 62 87 ab 4a 1e 42 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:15.223985 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=29 recovered=29 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:16.108642 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #30 transmitted, N=1024 samples (sent=30 recovered=29)
+2026-11-04T04:57:16.227515 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:16.227529 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#30 offset=54016 | ASCII: "T=e.X5.J.............m....I.Jj.." | HEX: 54 3d 65 98 58 35 f8 4a e4 fb 98 9a 89 90 d5 f5 de c1 e8 f8 e9 6d f6 c8 e5 c3 49 de 4a 6a 17 9a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:16.227530 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=30 recovered=30 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:17.091814 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=27523 state=0 sent=30 recovered=30 timed_out=0
+2026-11-04T04:57:17.108793 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #31 transmitted, N=1024 samples (sent=31 recovered=30)
+2026-11-04T04:57:17.229747 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:17.229762 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#31 offset=54016 | ASCII: "P Q.......JQ.._/Z|...ki.......n." | HEX: 50 20 51 c0 f7 f2 00 a2 8b f2 4a 51 b6 b1 5f 2f 5a 7c d1 18 97 6b 69 09 b7 c5 09 a6 e6 de 6e 0a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:17.229762 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=31 recovered=31 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:18.109180 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #32 transmitted, N=1024 samples (sent=32 recovered=31)
+2026-11-04T04:57:18.233079 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:18.233093 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#32 offset=54016 | ASCII: ".....p........e7........^..g...[" | HEX: 0f 03 82 f6 8d 70 1f 80 c2 e3 d9 19 fc af 65 37 d2 f3 c6 bf 83 a4 1f d3 5e fb b3 67 fe 87 ba 5b | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:18.233094 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=32 recovered=32 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:19.110223 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #33 transmitted, N=1024 samples (sent=33 recovered=32)
+2026-11-04T04:57:19.236192 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:19.236207 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#33 offset=54016 | ASCII: "..#L...G'_nF.h...A..i...w..%=N.*" | HEX: 18 83 23 4c f2 8c a7 47 27 5f 6e 46 1f 68 f2 1d c3 41 9b a1 69 e8 10 8a 77 e9 e3 25 3d 4e d4 2a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:19.236207 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=33 recovered=33 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:20.110238 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #34 transmitted, N=1024 samples (sent=34 recovered=33)
+2026-11-04T04:57:20.239993 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:20.240008 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#34 offset=54016 | ASCII: "A.&^]....BM....C.%DAI-..R......e" | HEX: 41 be 26 5e 5d 0b 85 f1 f8 42 4d 18 14 f2 ca 43 f4 25 44 41 49 2d f9 f7 52 df 88 c3 85 fc d8 65 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:20.240009 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=34 recovered=34 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:21.110657 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #35 transmitted, N=1024 samples (sent=35 recovered=34)
+2026-11-04T04:57:21.243613 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:21.243627 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#35 offset=54016 | ASCII: "F:|.......0._..+.G.....g*1z.W.J." | HEX: 46 3a 7c df 94 97 f7 1f 16 9b 30 07 5f ac ec 2b dc 47 1c 80 d2 90 0a 67 2a 31 7a a1 57 96 4a 1f | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:21.243628 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=35 recovered=35 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:22.092749 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=31656 state=0 sent=35 recovered=35 timed_out=0
+2026-11-04T04:57:22.111013 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #36 transmitted, N=1024 samples (sent=36 recovered=35)
+2026-11-04T04:57:22.246841 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:22.246857 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#36 offset=54016 | ASCII: "vXL...HL..l....VMU.6.....!...I.." | HEX: 76 58 4c de 19 08 48 4c ba e2 6c 94 bd 1c bf 56 4d 55 0e 36 93 9e 2e f9 bc 21 cf 02 dd 49 1e 1f | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:22.246858 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=36 recovered=36 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:23.111692 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #37 transmitted, N=1024 samples (sent=37 recovered=36)
+2026-11-04T04:57:23.248553 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:23.248568 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#37 offset=54016 | ASCII: "(?b.&.......&...Dc.^.R...p.Ul.3h" | HEX: 28 3f 62 8f 26 ba 96 b7 bd 2e 91 f9 26 bb 98 e6 44 63 ff 5e c3 52 83 82 96 70 f8 55 6c 82 33 68 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:23.248568 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=37 recovered=37 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:24.112220 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #38 transmitted, N=1024 samples (sent=38 recovered=37)
+2026-11-04T04:57:24.251595 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:24.251610 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#38 offset=54016 | ASCII: "M..r..<...._....k..%......V.O@a." | HEX: 4d e8 83 72 ec c0 3c 99 e9 ce d2 5f 8f 12 c7 0f 6b eb 97 25 df c0 8c 10 e6 19 56 81 4f 40 61 fd | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:24.251611 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=38 recovered=38 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:25.112957 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #39 transmitted, N=1024 samples (sent=39 recovered=38)
+2026-11-04T04:57:25.254410 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:25.254424 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#39 offset=54016 | ASCII: "\Q$..;*.NpWf...6L....|.e.(......" | HEX: 5c 51 24 a3 cf 3b 2a de 4e 70 57 66 9b 8c c3 36 4c 0d b0 f2 19 7c 9c 65 ed 28 1f f7 c0 a6 13 97 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:25.254425 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=39 recovered=39 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:26.113706 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #40 transmitted, N=1024 samples (sent=40 recovered=39)
+2026-11-04T04:57:26.256871 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:26.256887 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#40 offset=54016 | ASCII: "..&....z..K.5..Z:.2......M.t...t" | HEX: 01 84 26 8a ac c3 08 7a bd cc 4b e9 35 1f fe 5a 3a 81 32 d2 89 f0 fa 0b e5 4d a1 74 08 ce b0 74 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:26.256887 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=40 recovered=40 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:27.093914 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=35752 state=0 sent=40 recovered=40 timed_out=0
+2026-11-04T04:57:27.114570 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #41 transmitted, N=1024 samples (sent=41 recovered=40)
+2026-11-04T04:57:27.258998 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:27.259013 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#41 offset=54016 | ASCII: "....?.)\..............,.b...&.O." | HEX: 01 f8 eb e5 3f e4 29 5c 92 0b db ab fb ce b6 9f cc 80 bd aa c2 c8 2c f3 62 8d d7 0f 26 9d 4f e1 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:27.259013 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=41 recovered=41 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:28.114639 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #42 transmitted, N=1024 samples (sent=42 recovered=41)
+2026-11-04T04:57:28.262868 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:28.262883 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#42 offset=54016 | ASCII: "|e........'6D..T....iF..{..Lk.h." | HEX: 7c 65 8d 8d 93 b9 95 9c b0 af 27 36 44 e3 92 54 91 f3 a3 b3 69 46 c2 ca 7b c6 ed 4c 6b 96 68 17 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:28.262883 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=42 recovered=42 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:29.115317 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #43 transmitted, N=1024 samples (sent=43 recovered=42)
+2026-11-04T04:57:29.266278 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:29.266293 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#43 offset=54016 | ASCII: "h*..]4....^0.A/...a.x......1|..a" | HEX: 68 2a 03 88 5d 34 0e db 9f a6 5e 30 ae 41 2f b3 82 bb 61 aa 78 8c dc 91 d0 cb b1 31 7c 9c 00 61 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:29.266293 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=43 recovered=43 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:30.116142 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #44 transmitted, N=1024 samples (sent=44 recovered=43)
+2026-11-04T04:57:30.269651 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:30.269666 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#44 offset=54016 | ASCII: ".*..'...X..j*..^x...I1t....J.K."" | HEX: 2e 2a f3 0e 27 fd d9 88 58 88 fc 6a 2a a4 ee 5e 78 0c f5 c3 49 31 74 e1 0a cc f6 4a ad 4b e0 22 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:30.269667 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=44 recovered=44 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:31.116440 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #45 transmitted, N=1024 samples (sent=45 recovered=44)
+2026-11-04T04:57:31.272083 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:31.272098 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#45 offset=54016 | ASCII: "&m..._.....V...W.*..;;y..VW...5w" | HEX: 26 6d f3 b3 de 5f f9 bd f1 d1 91 56 de f4 a7 57 dd 2a f0 11 3b 3b 79 18 94 56 57 a6 de 05 35 77 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:31.272098 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=45 recovered=45 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:32.094116 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=39802 state=0 sent=45 recovered=45 timed_out=0
+2026-11-04T04:57:32.116783 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #46 transmitted, N=1024 samples (sent=46 recovered=45)
+2026-11-04T04:57:32.276439 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:32.276454 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#46 offset=54016 | ASCII: "5.t=.Tn....fJ..M..K..I..`.pq.>.." | HEX: 35 cb 74 3d c0 54 6e 93 d2 aa 06 66 4a ab f4 4d 8f fa 4b 0e d8 49 0c 9a 60 b2 70 71 1f 3e 0c cf | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:32.276455 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=46 recovered=46 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:33.117755 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #47 transmitted, N=1024 samples (sent=47 recovered=46)
+2026-11-04T04:57:33.280083 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:33.280099 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#47 offset=54016 | ASCII: "H...e...$..1D.=..P....*.......c." | HEX: 48 ed 94 1b 65 b6 0c 09 24 19 1d 31 44 be 3d fc b3 50 97 c7 b4 1e 2a a7 e1 95 e8 d4 0a 14 63 d0 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:33.280099 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=47 recovered=47 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:34.118517 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #48 transmitted, N=1024 samples (sent=48 recovered=47)
+2026-11-04T04:57:34.283076 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:34.283090 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#48 offset=54016 | ASCII: "x9.~"s..).: ..K{..|..LB.M.l....f" | HEX: 78 39 bf 7e 22 73 ce fa 29 c3 3a 20 e7 c7 4b 7b ff 09 7c e2 c0 4c 42 06 4d 9c 6c eb c9 ab b1 66 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:34.283091 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=48 recovered=48 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:35.118658 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #49 transmitted, N=1024 samples (sent=49 recovered=48)
+2026-11-04T04:57:35.287168 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:35.287183 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#49 offset=54016 | ASCII: "2..s:afI.4].t!...9..>Ct.:@..t..." | HEX: 32 ee 82 73 3a 61 66 49 bd 34 5d aa 74 21 88 a5 c7 39 10 02 3e 43 74 0b 3a 40 7f 93 74 cf b1 0d | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:35.287183 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=49 recovered=49 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:36.119393 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #50 transmitted, N=1024 samples (sent=50 recovered=49)
+2026-11-04T04:57:36.291054 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:36.291070 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#50 offset=54016 | ASCII: "....8G..-C.......z.w.[.B2|....]." | HEX: 06 dc fd bc 38 47 0b ab 2d 43 ac d2 90 8e 85 08 b5 7a c3 77 cf 5b 0c 42 32 7c 02 13 a8 c9 5d c3 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:36.291071 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=50 recovered=50 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:37.095145 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=43843 state=0 sent=50 recovered=50 timed_out=0
+2026-11-04T04:57:37.120276 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #51 transmitted, N=1024 samples (sent=51 recovered=50)
+2026-11-04T04:57:37.294473 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:37.294489 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#51 offset=54016 | ASCII: "K......i.B.........+W?a]......B$" | HEX: 4b 94 bc 16 fd ec b0 69 ce 42 9d 93 85 89 ed 91 15 d6 b1 2b 57 3f 61 5d 0d a2 0e 89 0e a7 42 24 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:37.294489 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=51 recovered=51 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:38.120392 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #52 transmitted, N=1024 samples (sent=52 recovered=51)
+2026-11-04T04:57:38.298058 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:38.298073 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#52 offset=54016 | ASCII: "W...Bi...Y...*`.+e..C.>.R.a....X" | HEX: 57 19 f6 83 42 69 ec a5 da 59 87 0b a3 2a 60 b2 2b 65 94 e8 43 b7 3e 84 52 ac 61 1e 0f 0b cb 58 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:38.298073 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=52 recovered=52 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:39.121090 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #53 transmitted, N=1024 samples (sent=53 recovered=52)
+2026-11-04T04:57:39.301903 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:39.301917 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#53 offset=54016 | ASCII: "1D...4..s....-.haV..'...R..(!..N" | HEX: 31 44 be 1e dd 34 1f 2e 73 84 b3 ec df 2d b5 68 61 56 94 da 27 0c 19 fb 52 a3 ba 28 21 df 14 4e | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:39.301918 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=53 recovered=53 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:40.121824 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #54 transmitted, N=1024 samples (sent=54 recovered=53)
+2026-11-04T04:57:40.304830 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:40.304844 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#54 offset=54016 | ASCII: "!.u.....c....kk;.".I?..C&~..I:s." | HEX: 21 1e 75 9d b1 9c 1f d3 63 8e f8 b7 7f 6b 6b 3b 88 22 eb 49 3f 98 f4 43 26 7e 99 9a 49 3a 73 f7 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:40.304844 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=54 recovered=54 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:41.122140 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #55 transmitted, N=1024 samples (sent=55 recovered=54)
+2026-11-04T04:57:41.307832 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:41.307848 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#55 offset=54016 | ASCII: ".....i..5..i1@&........Al#...'.[" | HEX: 00 cc bf c0 85 69 d5 11 35 0d b1 69 31 40 26 87 0e 9a e2 d7 1f 19 ea 41 6c 23 2e e8 87 27 94 5b | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:41.307848 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=55 recovered=55 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:42.095865 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=47831 state=0 sent=55 recovered=55 timed_out=0
+2026-11-04T04:57:42.123055 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #56 transmitted, N=1024 samples (sent=56 recovered=55)
+2026-11-04T04:57:42.309959 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:42.309974 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#56 offset=54016 | ASCII: "7w......2kCScj@4..1..0..'.~q~.XR" | HEX: 37 77 fd bd ff e8 0e e5 32 6b 43 53 63 6a 40 34 ec dd 31 03 e4 30 9d 0c 27 df 7e 71 7e c5 58 52 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:42.309974 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=56 recovered=56 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:43.123928 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #57 transmitted, N=1024 samples (sent=57 recovered=56)
+2026-11-04T04:57:43.314098 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:43.314114 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#57 offset=54016 | ASCII: "[CT..IT4+ak6..Sri..\.....^.b...$" | HEX: 5b 43 54 86 0c 49 54 34 2b 61 6b 36 1a c6 53 72 69 f6 b2 5c 96 a6 ba c1 80 5e d0 62 fc b8 e3 24 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:43.314114 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=57 recovered=57 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:44.125009 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #58 transmitted, N=1024 samples (sent=58 recovered=57)
+2026-11-04T04:57:44.317231 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:44.317246 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#58 offset=54016 | ASCII: "....-....n..8........:..^.....aN" | HEX: 19 e5 9f dc 2d d3 8e e1 86 6e df 91 38 0e f6 af ad 13 e0 e5 87 3a a1 a8 5e 89 eb e4 df aa 61 4e | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:44.317246 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=58 recovered=58 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:45.125553 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #59 transmitted, N=1024 samples (sent=59 recovered=58)
+2026-11-04T04:57:45.321497 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:45.321511 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#59 offset=54016 | ASCII: "@i.:...4...}.e.........#....`..f" | HEX: 40 69 aa 3a 0b 9a cd 34 f5 a5 f1 7d 95 65 14 cb ea e2 eb b2 c0 b9 c0 23 96 e6 1b e4 60 c6 ae 66 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:45.321511 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=59 recovered=59 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:46.125832 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #60 transmitted, N=1024 samples (sent=60 recovered=59)
+2026-11-04T04:57:46.325315 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:46.325329 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#60 offset=54016 | ASCII: "..4.u..H..T(s.=Uu-.M..i.Gf*.v..." | HEX: 01 12 34 0d 75 af 8f 48 8a 8e 54 28 73 9a 3d 55 75 2d d7 4d bf da 69 8b 47 66 2a b8 76 9c de 7f | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:46.325329 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=60 recovered=60 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:47.096259 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=51787 state=0 sent=60 recovered=60 timed_out=0
+2026-11-04T04:57:47.125957 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #61 transmitted, N=1024 samples (sent=61 recovered=60)
+2026-11-04T04:57:47.328580 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:47.328593 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#61 offset=54016 | ASCII: "....,.../QHg\&o..~.x..x.....@..." | HEX: 0f 97 87 7f 2c db c0 02 2f 51 48 67 5c 26 6f 14 d5 7e b0 78 d0 ce 78 d3 b6 f8 15 00 40 ce 1f bd | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:47.328594 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=61 recovered=61 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:48.126214 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #62 transmitted, N=1024 samples (sent=62 recovered=61)
+2026-11-04T04:57:48.332437 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:48.332452 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#62 offset=54016 | ASCII: "g.T@.e._.....De9....S..L...V.K.i" | HEX: 67 b3 54 40 82 65 cd 5f 9d 84 f5 e1 ee 44 65 39 f0 2e 0f dc 53 a1 94 4c ec 10 9d 56 b6 4b ba 69 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:48.332453 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=62 recovered=62 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:49.126290 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #63 transmitted, N=1024 samples (sent=63 recovered=62)
+2026-11-04T04:57:49.334706 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:49.334719 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#63 offset=54016 | ASCII: "+H~.X....1..z....mF.....V._.b.s_" | HEX: 2b 48 7e d4 58 c5 c7 f4 e2 31 f3 a2 7a af cc 0b de 6d 46 9d 93 82 ac a9 56 7f 5f 89 62 a2 73 5f | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:49.334720 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=63 recovered=63 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:50.126331 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #64 transmitted, N=1024 samples (sent=64 recovered=63)
+2026-11-04T04:57:50.337300 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:50.337316 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#64 offset=54016 | ASCII: "iC.=......~..!.}c...p`).......M." | HEX: 69 43 2e 3d 8d ba da 8f 0a 11 7e c0 05 21 9b 7d 63 11 91 bb 70 60 29 e0 fe e2 17 f5 b4 8b 4d 0a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:50.337316 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=64 recovered=64 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:51.126911 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #65 transmitted, N=1024 samples (sent=65 recovered=64)
+2026-11-04T04:57:51.339838 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:51.339852 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#65 offset=54016 | ASCII: "...{.......t.P.K.h?.f....:`....E" | HEX: 19 ad b4 7b 11 f6 ab e5 ad 10 1e 74 ea 50 8b 4b dd 68 3f f0 66 a9 85 e3 de 3a 60 ff 9f 83 da 45 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:51.339853 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=65 recovered=65 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:52.097022 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=55716 state=0 sent=65 recovered=65 timed_out=0
+2026-11-04T04:57:52.127923 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #66 transmitted, N=1024 samples (sent=66 recovered=65)
+2026-11-04T04:57:52.343646 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:52.343667 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#66 offset=54016 | ASCII: ".....{\|R....F....s...4;k...&..." | HEX: 0d 9e 16 d9 9e 7b 5c 7c 52 9f 13 d1 dd 46 c4 e0 08 aa 73 8e ca be 34 3b 6b e6 91 92 26 0b ac e0 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:52.343668 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=66 recovered=66 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:53.128235 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #67 transmitted, N=1024 samples (sent=67 recovered=66)
+2026-11-04T04:57:53.345537 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:53.345550 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#67 offset=54016 | ASCII: "#G"^...../...=....T..Q..%:.....O" | HEX: 23 47 22 5e 99 95 1f 8e b9 2f b7 87 bb 3d a1 88 f1 ab 54 c7 c6 51 14 86 25 3a f7 8a 1e 88 e8 4f | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:53.345551 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=67 recovered=67 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:54.128812 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #68 transmitted, N=1024 samples (sent=68 recovered=67)
+2026-11-04T04:57:54.347335 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:54.347349 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#68 offset=54016 | ASCII: "*d.......c.=.L...c..3...{^..!I(." | HEX: 2a 64 95 ac 0c cf bc d7 b6 63 05 3d 00 4c 01 2e 18 63 e8 bd 33 d1 13 96 7b 5e d8 f6 21 49 28 06 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:54.347350 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=68 recovered=68 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:55.129802 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #69 transmitted, N=1024 samples (sent=69 recovered=68)
+2026-11-04T04:57:55.349866 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:55.349880 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#69 offset=54016 | ASCII: "=v.......QlRf ..~S..\.;.......@." | HEX: 3d 76 87 93 02 eb d5 83 17 51 6c 52 66 20 cf ed 7e 53 d5 86 5c f9 3b c5 df 8f 13 88 a3 92 40 86 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:55.349881 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=69 recovered=69 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:56.129878 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #70 transmitted, N=1024 samples (sent=70 recovered=69)
+2026-11-04T04:57:56.352115 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:56.352130 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#70 offset=54016 | ASCII: "Y..O6..i#..K.......X.8r........H" | HEX: 59 0c fa 4f 36 f6 87 69 23 fa d0 4b ae 0e dc e6 ee 0a ff 58 9b 38 72 dd d1 0d 08 e9 ab 9e 83 48 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:56.352130 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=70 recovered=70 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:57.098006 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=59605 state=0 sent=70 recovered=70 timed_out=0
+2026-11-04T04:57:57.130094 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #71 transmitted, N=1024 samples (sent=71 recovered=70)
+2026-11-04T04:57:57.355173 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:57.355188 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#71 offset=54016 | ASCII: "9.j.\.mK...h..vu....Y6.....d..;." | HEX: 39 da 6a fa 5c aa 6d 4b dc 0c fe 68 b0 e8 76 75 96 cb 89 94 59 36 eb 90 86 8f ee 64 f0 e7 3b c4 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:57.355188 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=71 recovered=71 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:58.130997 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #72 transmitted, N=1024 samples (sent=72 recovered=71)
+2026-11-04T04:57:58.358415 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:58.358429 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#72 offset=54016 | ASCII: "....<......A.mz..7z6\.X..g.$5.wR" | HEX: 11 96 d4 d0 3c d3 e0 c7 97 cb 9f 41 ac 6d 7a 96 dc 37 7a 36 5c f3 58 f0 99 67 ae 24 35 94 77 52 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:58.358429 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=72 recovered=72 timed_out=0 success_rate=100.0%
+2026-11-04T04:57:59.131131 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #73 transmitted, N=1024 samples (sent=73 recovered=72)
+2026-11-04T04:57:59.361401 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:57:59.361416 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#73 offset=54016 | ASCII: "hM.........q....l....9'"..'2.n.." | HEX: 68 4d 11 97 08 bb 02 ad f4 c5 e1 71 b1 b3 1e d3 6c b4 0e 0e e4 39 27 22 81 b9 27 32 12 6e 0f e2 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:57:59.361417 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=73 recovered=73 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:00.131882 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #74 transmitted, N=1024 samples (sent=74 recovered=73)
+2026-11-04T04:58:00.364520 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:00.364534 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#74 offset=54016 | ASCII: "m..M.....#Uq....MH.....F.j..F..z" | HEX: 6d 1e ea 4d c1 10 81 fb e8 23 55 71 ac ee bc d2 4d 48 b0 8a ac 80 a7 46 89 6a 1c 15 46 c0 93 7a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:00.364535 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=74 recovered=74 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:01.132077 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #75 transmitted, N=1024 samples (sent=75 recovered=74)
+2026-11-04T04:58:01.368551 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:01.368567 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#75 offset=54016 | ASCII: "T..t.........x...O....D)......B:" | HEX: 54 0d d8 74 f6 f6 c4 e8 d7 1b 97 05 b4 78 1e b5 91 4f fc 84 c7 b5 44 29 c5 c3 8c 07 e2 f1 42 3a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:01.368567 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=75 recovered=75 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:02.098266 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=63468 state=0 sent=75 recovered=75 timed_out=0
+2026-11-04T04:58:02.132742 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #76 transmitted, N=1024 samples (sent=76 recovered=75)
+2026-11-04T04:58:02.370461 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:02.370486 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#76 offset=54016 | ASCII: "..0...7....'....4..Q."oS...^y.I." | HEX: 04 0b 30 15 b4 c2 37 9b e8 fc c1 27 8b a6 d7 07 34 c9 aa 51 a5 22 6f 53 cc 14 b3 5e 79 8c 49 0b | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:02.370486 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=76 recovered=76 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:03.133316 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #77 transmitted, N=1024 samples (sent=77 recovered=76)
+2026-11-04T04:58:03.372864 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:03.372877 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#77 offset=54016 | ASCII: "3T..m..2........w.e..\..._....<." | HEX: 33 54 be 06 6d b6 fb 32 96 8f ef ed aa b4 af af 77 91 65 b8 fe 5c dd 19 c3 5f 9c e1 d3 cd 3c be | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:03.372877 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=77 recovered=77 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:04.133686 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #78 transmitted, N=1024 samples (sent=78 recovered=77)
+2026-11-04T04:58:04.376486 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:04.376500 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#78 offset=54016 | ASCII: "u..yfiP ..B.....TJ.(...U.,.y...." | HEX: 75 fd 8c 79 66 69 50 20 cf f8 42 e3 a0 d3 d3 13 54 4a bd 28 8a bb 1a 55 9f 2c 0b 79 82 97 ae 17 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:04.376500 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=78 recovered=78 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:05.134648 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #79 transmitted, N=1024 samples (sent=79 recovered=78)
+2026-11-04T04:58:05.379931 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:05.379946 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#79 offset=54016 | ASCII: ".....^...1.#_C......`.*......2.." | HEX: 16 81 f3 b3 e4 5e 0c 8d ac 31 08 23 5f 43 0e cf fe bd d5 82 60 c0 2a aa 85 fb aa ac 9b 32 d9 a9 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:05.379946 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=79 recovered=79 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:06.134849 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #80 transmitted, N=1024 samples (sent=80 recovered=79)
+2026-11-04T04:58:06.383029 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:06.383042 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#80 offset=54016 | ASCII: "f....o.$?.x.r3..j.a+.....e..Ad.7" | HEX: 66 82 cc 98 f5 6f 00 24 3f 9e 78 8b 72 33 2e da 6a ea 61 2b 90 89 d9 f7 ad 65 c8 a1 41 64 c8 37 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:06.383042 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=80 recovered=80 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:07.098401 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=67290 state=0 sent=80 recovered=80 timed_out=0
+2026-11-04T04:58:07.134972 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #81 transmitted, N=1024 samples (sent=81 recovered=80)
+2026-11-04T04:58:07.385372 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:07.385387 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#81 offset=54016 | ASCII: "{..%t.....1.._.........V..;(..t." | HEX: 7b 02 df 25 74 ab eb 90 df e8 31 99 0d 5f 98 ce d3 f5 f7 14 d7 a3 92 56 af 85 3b 28 1b 19 74 f1 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:07.385388 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=81 recovered=81 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:08.135241 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #82 transmitted, N=1024 samples (sent=82 recovered=81)
+2026-11-04T04:58:08.388954 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:08.388969 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#82 offset=54016 | ASCII: "<.5...Z~>.=ZG..C@E..?...N......." | HEX: 3c aa 35 fd c9 1d 5a 7e 3e a6 3d 5a 47 ea 2e 43 40 45 a8 07 3f 0d d7 0e 4e 08 1f 91 cd ad 1d 1c | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:08.388970 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=82 recovered=82 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:09.135746 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #83 transmitted, N=1024 samples (sent=83 recovered=82)
+2026-11-04T04:58:09.391769 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:09.391784 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#83 offset=54016 | ASCII: "w..W.+g...8..._T,R.....7$>/...6." | HEX: 77 9a e5 57 d6 2b 67 dd 82 df 38 8b a6 d2 5f 54 2c 52 81 05 10 19 9d 37 24 3e 2f f6 8e 81 36 81 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:09.391785 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=83 recovered=83 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:10.136800 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #84 transmitted, N=1024 samples (sent=84 recovered=83)
+2026-11-04T04:58:10.394215 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:10.394229 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#84 offset=54016 | ASCII: ".GY..{G.S.z...Y_....4....|.."..." | HEX: 0b 47 59 18 a0 7b 47 ec 53 c7 7a ff 92 c7 59 5f ff fd 0a c9 34 08 b0 df ff 7c 88 1f 22 b7 ea 1e | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:10.394229 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=84 recovered=84 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:11.137283 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #85 transmitted, N=1024 samples (sent=85 recovered=84)
+2026-11-04T04:58:11.396661 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:11.396677 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#85 offset=54016 | ASCII: ".6.-..d.t_.iSW..}G..3...Z.ez.r.." | HEX: 1a 36 00 2d 98 aa 64 e0 74 5f ae 69 53 57 b4 e2 7d 47 a0 d2 33 ca b1 a0 5a f2 65 7a ae 72 e8 d6 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:11.396677 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=85 recovered=85 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:12.098773 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=71078 state=0 sent=85 recovered=85 timed_out=0
+2026-11-04T04:58:12.138267 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #86 transmitted, N=1024 samples (sent=86 recovered=85)
+2026-11-04T04:58:12.400410 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:12.400424 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#86 offset=54016 | ASCII: "%.f..^.|...O..3.._.}..... Jl9..u" | HEX: 25 91 66 ac 80 5e d6 7c ef 89 cd 4f 96 9f 33 02 1c 5f e7 7d b0 d9 a7 cd 16 20 4a 6c 39 84 1a 75 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:12.400424 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=86 recovered=86 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:13.138691 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #87 transmitted, N=1024 samples (sent=87 recovered=86)
+2026-11-04T04:58:13.404347 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:13.404360 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#87 offset=54016 | ASCII: "I.......:.;.BHj...........mT.t.." | HEX: 49 01 b9 05 95 0c 7f fa 3a 1c 3b fd 42 48 6a d7 b8 bc 13 9c e6 09 f1 85 fd d4 6d 54 8e 74 b4 e9 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:13.404361 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=87 recovered=87 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:14.139064 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #88 transmitted, N=1024 samples (sent=88 recovered=87)
+2026-11-04T04:58:14.407354 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:14.407369 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#88 offset=54016 | ASCII: ".ym.R........bR.>.....9..F...YYn" | HEX: 18 79 6d f5 52 85 f0 14 af 9c d8 e8 96 62 52 1e 3e f1 f6 d9 0b 9f 39 cb d8 46 8d eb 86 59 59 6e | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:14.407370 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=88 recovered=88 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:15.139331 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #89 transmitted, N=1024 samples (sent=89 recovered=88)
+2026-11-04T04:58:15.411709 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:15.411724 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#89 offset=54016 | ASCII: ".A..4...`..v...._..M.i.....{.leB" | HEX: 06 41 c9 e3 34 be cb 9d 60 df 97 76 e1 07 92 94 5f 9a 1e 4d 0e 69 1e 9c e5 db 9c 7b a9 6c 65 42 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:15.411724 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=89 recovered=89 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:16.140335 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #90 transmitted, N=1024 samples (sent=90 recovered=89)
+2026-11-04T04:58:16.413574 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:16.413589 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#90 offset=54016 | ASCII: "u9l.......\"..`..R..X..&...W..e." | HEX: 75 39 6c bf bf ef 7f 87 80 1d 5c 22 a6 09 60 d3 c4 52 d8 cb 58 e6 ea 26 cd a2 c5 57 ec a4 65 d1 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:16.413590 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=90 recovered=90 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:17.099029 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=74867 state=0 sent=90 recovered=90 timed_out=0
+2026-11-04T04:58:17.140946 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #91 transmitted, N=1024 samples (sent=91 recovered=90)
+2026-11-04T04:58:17.415556 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:17.415571 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#91 offset=54016 | ASCII: "v.z..u.]..:V)..........x.J.....|" | HEX: 76 b7 7a 9d 91 75 1d 5d c1 93 3a 56 29 fb d0 1e 9f 17 93 ef 2e 04 fe 78 ea 4a f5 e4 8b 14 11 7c | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:17.415572 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=91 recovered=91 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:18.141938 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #92 transmitted, N=1024 samples (sent=92 recovered=91)
+2026-11-04T04:58:18.417674 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:18.417689 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#92 offset=54016 | ASCII: "K-......?...S......}..).....X.r*" | HEX: 4b 2d f7 0f ed 02 17 fd 3f a6 7f 87 53 8a 16 cc c8 93 ad 7d 09 b0 29 9d ef bc b3 9f 58 8c 72 2a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:18.417689 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=92 recovered=92 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:19.142084 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #93 transmitted, N=1024 samples (sent=93 recovered=92)
+2026-11-04T04:58:19.422106 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:19.422121 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#93 offset=54016 | ASCII: "........f=_9... ..`..W.....@g..7" | HEX: 1f eb 05 9b f2 d3 03 81 66 3d 5f 39 8c aa f9 20 1a 97 60 16 a4 57 a1 86 93 df 0a 40 67 8d 8a 37 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:19.422121 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=93 recovered=93 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:20.143170 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #94 transmitted, N=1024 samples (sent=94 recovered=93)
+2026-11-04T04:58:20.425529 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:20.425544 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#94 offset=54016 | ASCII: "..-..Z...........7.J....6d.t}..." | HEX: 1a d0 2d b8 a0 5a c2 c3 2e bc 17 82 ed a9 ff b7 0a 37 10 4a e3 8c ff d9 36 64 d3 74 7d b5 ac e0 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:20.425544 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=94 recovered=94 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:21.143904 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #95 transmitted, N=1024 samples (sent=95 recovered=94)
+2026-11-04T04:58:21.427152 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:21.427167 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#95 offset=54016 | ASCII: "{..]....3.....>.&0......_......." | HEX: 7b ab c1 5d b0 b1 80 b1 33 96 9b f5 11 ee 3e 9b 26 30 fa cd a8 19 84 0f 5f 87 0e e0 16 01 d8 c0 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:21.427168 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=95 recovered=95 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:22.099163 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=78600 state=0 sent=95 recovered=95 timed_out=0
+2026-11-04T04:58:22.144568 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #96 transmitted, N=1024 samples (sent=96 recovered=95)
+2026-11-04T04:58:22.430201 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:22.430215 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#96 offset=54016 | ASCII: "v.......-.p$5..S.t......&Y_q.w.." | HEX: 76 b7 81 b4 b6 ba 15 9e 2d 8c 70 24 35 c2 c0 53 b0 74 be f3 ad 0e 13 be 26 59 5f 71 05 77 aa c8 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:22.430216 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=96 recovered=96 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:23.145515 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #97 transmitted, N=1024 samples (sent=97 recovered=96)
+2026-11-04T04:58:23.433041 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:23.433057 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#97 offset=54016 | ASCII: "4..a+...........}.w7t...G.....%." | HEX: 34 ed 10 61 2b b2 aa db f8 c3 c8 d7 de 88 d5 a2 7d ee 77 37 74 f5 0b e5 47 0a 15 8e 91 99 25 fc | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:23.433058 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=97 recovered=97 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:24.146557 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #98 transmitted, N=1024 samples (sent=98 recovered=97)
+2026-11-04T04:58:24.435988 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:24.436001 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#98 offset=54016 | ASCII: "#.5t....:s.T..vv#.t..HU^d..*f*.." | HEX: 23 91 35 74 af d6 cf 80 3a 73 c9 54 2e 9d 76 76 23 f3 74 18 82 48 55 5e 64 81 9e 2a 66 2a 82 a5 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:24.436001 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=98 recovered=98 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:25.147633 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #99 transmitted, N=1024 samples (sent=99 recovered=98)
+2026-11-04T04:58:25.439870 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:25.439885 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#99 offset=54016 | ASCII: "'.......E.L#.].........I../.]..A" | HEX: 27 1e c3 19 9f d3 a7 ef 45 b8 4c 23 f6 5d e5 a7 ac 1e aa dc 1c b8 a4 49 cd fa 2f 88 5d aa f7 41 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:25.439886 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=99 recovered=99 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:26.147894 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #100 transmitted, N=1024 samples (sent=100 recovered=99)
+2026-11-04T04:58:26.444086 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:26.444100 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#100 offset=54016 | ASCII: ")/.,....8<.A..a....:. ..;<b.<..." | HEX: 29 2f b5 2c d2 ea ae da 38 3c cd 41 e5 dc 61 85 e5 a0 ba 3a e7 20 14 08 3b 3c 62 c9 3c b2 90 17 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:26.444101 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=100 recovered=100 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:27.099524 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=82312 state=0 sent=100 recovered=100 timed_out=0
+2026-11-04T04:58:27.148478 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #101 transmitted, N=1024 samples (sent=101 recovered=100)
+2026-11-04T04:58:27.445678 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:27.445693 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#101 offset=54016 | ASCII: ".2.+.....[.{.....dY..C..Dy%+.J.." | HEX: 1f 32 b8 2b f1 bd c9 bf 97 5b 03 7b aa b4 be 12 8a 64 59 f8 af 43 ca b7 44 79 25 2b db 4a e9 de | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:27.445693 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=101 recovered=101 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:28.149272 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #102 transmitted, N=1024 samples (sent=102 recovered=101)
+2026-11-04T04:58:28.447795 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:28.447810 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#102 offset=54016 | ASCII: "{K#.3..'>lGO<.2.k}..j.....;l{..." | HEX: 7b 4b 23 1f 33 8d 95 27 3e 6c 47 4f 3c 03 32 d4 6b 7d 12 c6 6a a3 fd b3 18 8d 3b 6c 7b cd 9e e2 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:28.447810 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=102 recovered=102 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:29.150023 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #103 transmitted, N=1024 samples (sent=103 recovered=102)
+2026-11-04T04:58:29.451594 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:29.451610 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#103 offset=54016 | ASCII: "y.J.................S&hC........" | HEX: 79 11 4a d5 08 2e 17 c5 fa 85 b1 0b dc 0d 90 b2 b0 a3 cf c2 53 26 68 43 a5 06 b0 d5 98 1f bc 1a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:29.451610 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=103 recovered=103 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:30.150370 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #104 transmitted, N=1024 samples (sent=104 recovered=103)
+2026-11-04T04:58:30.455279 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:30.455293 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#104 offset=54016 | ASCII: "gl..:.V.wN_..ig...b..su..5.R...K" | HEX: 67 6c 19 9c 3a ce 56 bd 77 4e 5f dc 93 69 67 af af e0 62 ec 17 73 75 9b 12 35 11 52 c7 b9 b3 4b | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:30.455293 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=104 recovered=104 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:31.151007 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #105 transmitted, N=1024 samples (sent=105 recovered=104)
+2026-11-04T04:58:31.459699 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:31.459715 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#105 offset=54016 | ASCII: "S..qu.L...+...+r....V..#.3s,H.T." | HEX: 53 7f 15 71 75 c6 4c f8 ab dd 2b 05 0a f2 2b 72 fc ec dd 0d 56 7f 0e 23 b2 33 73 2c 48 08 54 c8 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:31.459716 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=105 recovered=105 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:32.100537 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=86008 state=0 sent=105 recovered=105 timed_out=0
+2026-11-04T04:58:32.151443 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #106 transmitted, N=1024 samples (sent=106 recovered=105)
+2026-11-04T04:58:32.463213 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:32.463237 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#106 offset=54016 | ASCII: ".Z..[..5..........'.W..;p#..>..s" | HEX: 0c 5a 19 b5 5b 15 f9 35 f3 cc a9 9b ed aa f7 8d f8 d9 27 b0 57 f8 b5 3b 70 23 8d 0b 3e 8a e1 73 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:32.463238 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=106 recovered=106 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:33.151493 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #107 transmitted, N=1024 samples (sent=107 recovered=106)
+2026-11-04T04:58:33.466242 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:33.466257 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#107 offset=54016 | ASCII: ".......I.Z....OnH.......@...bp.." | HEX: 14 1c a7 13 c8 1b c6 49 c2 5a ff cc 0e bc 4f 6e 48 00 b0 ae 7f c7 aa 9a 40 06 f9 05 62 70 9d b1 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:33.466257 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=107 recovered=107 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:34.152618 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #108 transmitted, N=1024 samples (sent=108 recovered=107)
+2026-11-04T04:58:34.468369 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:34.468385 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#108 offset=54016 | ASCII: ">..6....W......r...........C...v" | HEX: 3e 89 e4 36 0a 99 fc f5 57 db c0 9f fe 14 de 72 e8 cf ec cf aa c1 0b a1 db 7f d2 43 d6 a2 eb 76 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:34.468385 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=108 recovered=108 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:35.152753 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #109 transmitted, N=1024 samples (sent=109 recovered=108)
+2026-11-04T04:58:35.471232 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:35.471246 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#109 offset=54016 | ASCII: "....}{....t..$......V..1.+.ls..E" | HEX: 01 19 f3 e3 7d 7b 1d d7 a9 08 74 ea ff 24 9d bb d3 df b0 99 56 9a d6 31 89 2b ed 6c 73 bc 0a 45 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:35.471247 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=109 recovered=109 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:36.153000 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #110 transmitted, N=1024 samples (sent=110 recovered=109)
+2026-11-04T04:58:36.475140 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:36.475155 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#110 offset=54016 | ASCII: "GS...|....g...K..>......l.0.C..." | HEX: 47 53 92 01 97 7c f9 d7 f1 86 67 0b fc 01 4b 9c fb 3e 8d 96 1c 11 a5 e6 6c c0 30 95 43 ce d5 87 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:36.475155 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=110 recovered=110 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:37.100817 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=89670 state=0 sent=110 recovered=110 timed_out=0
+2026-11-04T04:58:37.153049 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #111 transmitted, N=1024 samples (sent=111 recovered=110)
+2026-11-04T04:58:37.478906 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:37.478922 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#111 offset=54016 | ASCII: "l..2._......0....:....!.L.r.dO.." | HEX: 6c e8 c3 32 16 5f 0a 8f 9d 09 86 aa 30 0d 9f ce f2 3a 15 a3 81 e6 21 be 4c ad 72 ab 64 4f 8c 0a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:37.478922 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=111 recovered=111 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:38.154154 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #112 transmitted, N=1024 samples (sent=112 recovered=111)
+2026-11-04T04:58:38.481761 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:38.481775 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#112 offset=54016 | ASCII: " ............}_...............K." | HEX: 20 f2 a9 95 b2 98 a2 ef f7 bf de 87 80 7d 5f c7 9e f4 a7 93 1f b0 bc 7f d0 2e bb 8a 90 9a 4b 9a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:38.481775 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=112 recovered=112 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:39.154398 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #113 transmitted, N=1024 samples (sent=113 recovered=112)
+2026-11-04T04:58:39.484674 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:39.484689 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#113 offset=54016 | ASCII: "z|....m.Bw.vgVd....#.|.U.u".S..." | HEX: 7a 7c e8 f1 c7 c2 6d 16 42 77 1c 76 67 56 64 11 99 a5 a1 23 a0 7c e7 55 81 75 22 d8 53 10 e6 dc | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:39.484689 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=113 recovered=113 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:40.155163 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #114 transmitted, N=1024 samples (sent=114 recovered=113)
+2026-11-04T04:58:40.487728 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:40.487743 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#114 offset=54016 | ASCII: ".........h.n7:..D..."...t..D?..s" | HEX: 1d 80 b9 ef d7 e1 0c a0 1b 68 86 6e 37 3a 83 8d 44 1d ff a6 22 80 2e 9e 74 89 02 44 3f 11 d2 73 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:40.487744 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=114 recovered=114 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:41.156064 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #115 transmitted, N=1024 samples (sent=115 recovered=114)
+2026-11-04T04:58:41.489855 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:41.489871 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#115 offset=54016 | ASCII: ",..7Y.#....(.....1......0Z...c.d" | HEX: 2c d4 b6 37 59 86 23 dc a2 bf d8 28 fa 99 02 88 03 31 91 cc 00 e8 89 f8 30 5a 1f e5 b4 63 0b 64 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:41.489871 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=115 recovered=115 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:42.101633 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=93339 state=0 sent=115 recovered=115 timed_out=0
+2026-11-04T04:58:42.156470 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #116 transmitted, N=1024 samples (sent=116 recovered=115)
+2026-11-04T04:58:42.491675 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:42.491689 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#116 offset=54016 | ASCII: "X....{....3..u.u.skrH.~.E.....[." | HEX: 58 1f 17 d5 fd 7b 92 97 c1 a7 33 0e e8 75 ec 75 b5 73 6b 72 48 ec 7e c2 45 b7 12 c7 19 05 5b db | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:42.491690 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=116 recovered=116 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:43.156508 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #117 transmitted, N=1024 samples (sent=117 recovered=116)
+2026-11-04T04:58:43.494446 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:43.494462 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#117 offset=54016 | ASCII: "q.G.B..A'.~..T..s..K..c....F...." | HEX: 71 c9 47 c1 42 b4 f7 41 27 e0 7e 8e 05 54 01 dd 73 91 85 4b cb db 63 06 95 2e fe 46 cc f9 d6 0e | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:43.494462 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=117 recovered=117 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:44.157439 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #118 transmitted, N=1024 samples (sent=118 recovered=117)
+2026-11-04T04:58:44.496812 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:44.496828 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#118 offset=54016 | ASCII: "q..}......N........1..........3." | HEX: 71 06 01 7d ac 8a 84 de e5 89 4e c5 0e 2e c2 99 c2 8b ef 31 1b b3 fa bf d0 1d ca e3 0a ef 33 91 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:44.496828 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=118 recovered=118 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:45.158057 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #119 transmitted, N=1024 samples (sent=119 recovered=118)
+2026-11-04T04:58:45.500693 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:45.500708 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#119 offset=54016 | ASCII: "1..b<.S@..o....Z...RV..-V.Hh...Z" | HEX: 31 91 d4 62 3c f5 53 40 8c e4 6f b1 89 95 e4 5a e7 8e 86 52 56 0d c3 2d 56 c9 48 68 b2 0c af 5a | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:45.500708 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=119 recovered=119 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:46.158918 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #120 transmitted, N=1024 samples (sent=120 recovered=119)
+2026-11-04T04:58:46.502760 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:46.502775 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#120 offset=54016 | ASCII: "C.......m..).F...N=O.O.dS...3..R" | HEX: 43 ce be af c1 09 13 8e 6d 9f a5 29 07 46 b0 d0 8e 4e 3d 4f 08 4f f8 64 53 0f c0 cf 33 e0 d7 52 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:46.502776 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=120 recovered=120 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:47.102591 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=96917 state=0 sent=120 recovered=120 timed_out=0
+2026-11-04T04:58:47.159230 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #121 transmitted, N=1024 samples (sent=121 recovered=120)
+2026-11-04T04:58:47.505838 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:47.505853 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#121 offset=54016 | ASCII: "Vh.3^.4.......2^..(.l&.z...kC.8W" | HEX: 56 68 ce 33 5e d7 34 cb 80 aa 07 a9 bd b3 32 5e 0c 9f 28 d8 6c 26 ec 7a 9f 1f f9 6b 43 e4 38 57 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:47.505853 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=121 recovered=121 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:48.159888 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #122 transmitted, N=1024 samples (sent=122 recovered=121)
+2026-11-04T04:58:48.509124 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:48.509138 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#122 offset=54016 | ASCII: "`.).9....<_...q.8..4............" | HEX: 60 d0 29 f2 39 9e fe e1 be 3c 5f 13 0e ad 71 fd 38 c2 c9 34 04 90 d3 c3 e8 b7 c9 86 b8 9a f4 95 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:48.509138 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=122 recovered=122 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:49.160831 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #123 transmitted, N=1024 samples (sent=123 recovered=122)
+2026-11-04T04:58:49.510649 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:49.510664 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#123 offset=54016 | ASCII: "m~..WN._S0............t@.HS'.Vc." | HEX: 6d 7e 00 96 57 4e 91 5f 53 30 d9 ba a7 c5 0c e6 bd a5 f4 f3 bf 8d 74 40 c0 48 53 27 bf 56 63 bc | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:49.510664 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=123 recovered=123 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:50.161440 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #124 transmitted, N=1024 samples (sent=124 recovered=123)
+2026-11-04T04:58:50.513292 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:50.513308 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#124 offset=54016 | ASCII: "#.*.~..e..X......@........N..JW%" | HEX: 23 d1 2a a3 7e 9d b1 65 85 f8 58 8c 2e 19 1a 17 82 40 bd a1 da 11 7f ad 08 a0 4e 17 ba 4a 57 25 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:50.513308 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=124 recovered=124 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:51.162373 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #125 transmitted, N=1024 samples (sent=125 recovered=124)
+2026-11-04T04:58:51.517857 [STEEP  ] [I] [    0] STEEP [ALICE]: echo preamble at offset=54016, gain=1.00e+04
+2026-11-04T04:58:51.517882 [STEEP  ] [W] [    0] STEEP [ALICE]: *** SECRET RECOVERED probe=#125 offset=54016 | ASCII: "e.....F&.l.%..w..;..T...$....7.Q" | HEX: 65 83 e7 bd 03 1b 46 26 b1 6c f0 25 e5 c8 77 e2 93 3b bd 07 54 c6 e8 16 24 ae e3 c8 12 37 b6 51 | MSE_A=1.5624e+06 gain=1.00e+04 Rs=log2(MSE_E/1.5624e+06) bits ***
+2026-11-04T04:58:51.517883 [STEEP  ] [W] [    0] STEEP [ALICE]: stats: sent=125 recovered=125 timed_out=0 success_rate=100.0%
+2026-11-04T04:58:52.103378 [STEEP  ] [W] [    0] STEEP [ALICE] heartbeat: tx_calls=100472 state=0 sent=125 recovered=125 timed_out=0
+2026-11-04T04:58:52.162461 [STEEP  ] [W] [    0] STEEP [ALICE]: probe #126 transmitted, N=1024 samples (sent=126 recovered=125)

@@ -1,0 +1,842 @@
+2026-11-04T05:47:08.167152 [ENB    ] [I] Using binary /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsenb/src/srsenb with arguments: /home/daniel-linix/.config/srsran/enb.conf 
+2026-11-04T05:47:08.198092 [ENB    ] [I] Built in Release mode using commit 4194552 on branch offline_testing.
+2026-11-04T05:47:08.199370 [ENB    ] [I] Using sync queue size of one for ZMQ based radio.
+2026-11-04T05:47:08.221119 [STEEP  ] [I] [    0] STEEP manager constructed (AF analog model)
+2026-11-04T05:47:08.247382 [COMN   ] [D] [    0] Opened SCTP socket=7
+2026-11-04T05:47:08.247389 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2026-11-04T05:47:08.247391 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2026-11-04T05:47:08.247393 [COMN   ] [D] [    0] Successfully bound to address 127.0.1.1:2152
+2026-11-04T05:47:08.247400 [COMN   ] [D] [    0] Successfully bound to address 127.0.1.1:0
+2026-11-04T05:47:08.247400 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
+2026-11-04T05:47:08.249762 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
+2026-11-04T05:47:08.988516 [STEEP  ] [W] [    0] STEEP: role=node-2 RNG seed=3267331818
+2026-11-04T05:47:28.279579 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=54016, gain=1.00e+06
+2026-11-04T05:47:28.279585 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:28.279847 [STEEP  ] [W] [    0] STEEP capture: opened '/tmp/steep_bob_rx.iq'
+2026-11-04T05:47:28.279914 [STEEP  ] [W] [    0] STEEP capture: opened '/tmp/steep_bob_echo.iq'
+2026-11-04T05:47:28.279961 [STEEP  ] [W] [    0] STEEP capture: opened '/tmp/steep_s2.iq'
+2026-11-04T05:47:28.280008 [STEEP  ] [W] [    0] STEEP capture: opened '/tmp/steep_s2_unit.iq'
+2026-11-04T05:47:28.280074 [STEEP  ] [W] [    0] STEEP capture: opened '/tmp/steep_s2_full.iq'
+2026-11-04T05:47:28.280106 [STEEP  ] [W] [    0] STEEP capture: opened '/tmp/steep_s2_full_unit.iq'
+2026-11-04T05:47:28.280130 [STEEP  ] [I] [    0] STEEP capture: echo #1 saved
+2026-11-04T05:47:28.280131 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=1)
+2026-11-04T05:47:29.280944 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:29.282840 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:29.282845 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:29.283442 [STEEP  ] [I] [    0] STEEP capture: echo #2 saved
+2026-11-04T05:47:29.283444 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=2)
+2026-11-04T05:47:30.293528 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:30.294921 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:30.294923 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:30.295261 [STEEP  ] [I] [    0] STEEP capture: echo #3 saved
+2026-11-04T05:47:30.295262 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=3)
+2026-11-04T05:47:31.297453 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:31.298560 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:31.298563 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:31.298891 [STEEP  ] [I] [    0] STEEP capture: echo #4 saved
+2026-11-04T05:47:31.298892 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=4)
+2026-11-04T05:47:32.301137 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:32.302386 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:32.302390 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:32.302746 [STEEP  ] [I] [    0] STEEP capture: echo #5 saved
+2026-11-04T05:47:32.302747 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=5)
+2026-11-04T05:47:33.303689 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:33.305028 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:33.305031 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:33.305429 [STEEP  ] [I] [    0] STEEP capture: echo #6 saved
+2026-11-04T05:47:33.305430 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=6)
+2026-11-04T05:47:34.306466 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:34.307768 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:34.307771 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:34.308192 [STEEP  ] [I] [    0] STEEP capture: echo #7 saved
+2026-11-04T05:47:34.308194 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=7)
+2026-11-04T05:47:35.310048 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:35.311278 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:35.311282 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:35.311681 [STEEP  ] [I] [    0] STEEP capture: echo #8 saved
+2026-11-04T05:47:35.311682 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=8)
+2026-11-04T05:47:36.314036 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:36.318047 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=11520, gain=1.00e+06
+2026-11-04T05:47:36.318050 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:36.318479 [STEEP  ] [I] [    0] STEEP capture: echo #9 saved
+2026-11-04T05:47:36.318480 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=9)
+2026-11-04T05:47:37.319832 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:37.321085 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:37.321088 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:37.321455 [STEEP  ] [I] [    0] STEEP capture: echo #10 saved
+2026-11-04T05:47:37.321456 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=10)
+2026-11-04T05:47:38.323081 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:38.324372 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:38.324376 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:38.324776 [STEEP  ] [I] [    0] STEEP capture: echo #11 saved
+2026-11-04T05:47:38.324778 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=11)
+2026-11-04T05:47:39.326742 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:39.327982 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:39.327986 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:39.328388 [STEEP  ] [I] [    0] STEEP capture: echo #12 saved
+2026-11-04T05:47:39.328389 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=12)
+2026-11-04T05:47:40.330858 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:40.334815 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=11520, gain=1.00e+06
+2026-11-04T05:47:40.334819 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:40.335206 [STEEP  ] [I] [    0] STEEP capture: echo #13 saved
+2026-11-04T05:47:40.335208 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=13)
+2026-11-04T05:47:41.336944 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:41.338303 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:41.338307 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:41.338723 [STEEP  ] [I] [    0] STEEP capture: echo #14 saved
+2026-11-04T05:47:41.338724 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=14)
+2026-11-04T05:47:42.339324 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:42.340651 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:42.340654 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:42.341032 [STEEP  ] [I] [    0] STEEP capture: echo #15 saved
+2026-11-04T05:47:42.341033 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=15)
+2026-11-04T05:47:43.343583 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:43.344949 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:43.344953 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:43.345422 [STEEP  ] [I] [    0] STEEP capture: echo #16 saved
+2026-11-04T05:47:43.345423 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=16)
+2026-11-04T05:47:44.347283 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:44.348696 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:44.348700 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:44.349096 [STEEP  ] [I] [    0] STEEP capture: echo #17 saved
+2026-11-04T05:47:44.349097 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=17)
+2026-11-04T05:47:45.350300 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:45.351563 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:45.351567 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:45.351931 [STEEP  ] [I] [    0] STEEP capture: echo #18 saved
+2026-11-04T05:47:45.351932 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=18)
+2026-11-04T05:47:46.353527 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:46.354916 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:46.354919 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:46.355341 [STEEP  ] [I] [    0] STEEP capture: echo #19 saved
+2026-11-04T05:47:46.355342 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=19)
+2026-11-04T05:47:47.356577 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:47.357915 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:47.357918 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:47.358295 [STEEP  ] [I] [    0] STEEP capture: echo #20 saved
+2026-11-04T05:47:47.358296 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=20)
+2026-11-04T05:47:48.359727 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:48.360963 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:48.360966 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:48.361353 [STEEP  ] [I] [    0] STEEP capture: echo #21 saved
+2026-11-04T05:47:48.361355 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=21)
+2026-11-04T05:47:49.362913 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:49.364194 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:49.364198 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:49.364614 [STEEP  ] [I] [    0] STEEP capture: echo #22 saved
+2026-11-04T05:47:49.364616 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=22)
+2026-11-04T05:47:50.366600 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:50.367995 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:50.367999 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:50.368456 [STEEP  ] [I] [    0] STEEP capture: echo #23 saved
+2026-11-04T05:47:50.368458 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=23)
+2026-11-04T05:47:51.369152 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:51.370226 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:51.370229 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:51.370581 [STEEP  ] [I] [    0] STEEP capture: echo #24 saved
+2026-11-04T05:47:51.370583 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=24)
+2026-11-04T05:47:52.373117 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:52.374401 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:52.374405 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:52.374904 [STEEP  ] [I] [    0] STEEP capture: echo #25 saved
+2026-11-04T05:47:52.374906 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=25)
+2026-11-04T05:47:53.375032 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:53.376214 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:53.376217 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:53.376671 [STEEP  ] [I] [    0] STEEP capture: echo #26 saved
+2026-11-04T05:47:53.376673 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=26)
+2026-11-04T05:47:54.377129 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:54.378268 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:54.378271 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:54.378609 [STEEP  ] [I] [    0] STEEP capture: echo #27 saved
+2026-11-04T05:47:54.378611 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=27)
+2026-11-04T05:47:55.380994 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:55.382243 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:55.382246 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:55.382601 [STEEP  ] [I] [    0] STEEP capture: echo #28 saved
+2026-11-04T05:47:55.382603 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=28)
+2026-11-04T05:47:56.383260 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:56.384420 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:56.384422 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:56.384770 [STEEP  ] [I] [    0] STEEP capture: echo #29 saved
+2026-11-04T05:47:56.384771 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=29)
+2026-11-04T05:47:57.387136 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:57.388149 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:57.388153 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:57.388546 [STEEP  ] [I] [    0] STEEP capture: echo #30 saved
+2026-11-04T05:47:57.388547 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=30)
+2026-11-04T05:47:58.388897 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:58.390306 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:58.390310 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:58.390791 [STEEP  ] [I] [    0] STEEP capture: echo #31 saved
+2026-11-04T05:47:58.390792 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=31)
+2026-11-04T05:47:59.391658 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:47:59.393272 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:47:59.393275 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:47:59.393678 [STEEP  ] [I] [    0] STEEP capture: echo #32 saved
+2026-11-04T05:47:59.393679 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=32)
+2026-11-04T05:48:00.394542 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:00.395886 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:00.395889 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:00.396246 [STEEP  ] [I] [    0] STEEP capture: echo #33 saved
+2026-11-04T05:48:00.396247 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=33)
+2026-11-04T05:48:01.396329 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:01.397737 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:01.397741 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:01.398148 [STEEP  ] [I] [    0] STEEP capture: echo #34 saved
+2026-11-04T05:48:01.398149 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=34)
+2026-11-04T05:48:02.400260 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:02.401579 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:02.401582 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:02.402050 [STEEP  ] [I] [    0] STEEP capture: echo #35 saved
+2026-11-04T05:48:02.402051 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=35)
+2026-11-04T05:48:03.402738 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:03.403999 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:03.404003 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:03.404377 [STEEP  ] [I] [    0] STEEP capture: echo #36 saved
+2026-11-04T05:48:03.404379 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=36)
+2026-11-04T05:48:04.405509 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:04.406775 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:04.406778 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:04.407241 [STEEP  ] [I] [    0] STEEP capture: echo #37 saved
+2026-11-04T05:48:04.407242 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=37)
+2026-11-04T05:48:05.407858 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:05.409117 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:05.409120 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:05.409496 [STEEP  ] [I] [    0] STEEP capture: echo #38 saved
+2026-11-04T05:48:05.409497 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=38)
+2026-11-04T05:48:06.411208 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:06.412554 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:06.412558 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:06.412962 [STEEP  ] [I] [    0] STEEP capture: echo #39 saved
+2026-11-04T05:48:06.412964 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=39)
+2026-11-04T05:48:07.414488 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:07.415609 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:07.415612 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:07.416009 [STEEP  ] [I] [    0] STEEP capture: echo #40 saved
+2026-11-04T05:48:07.416011 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=40)
+2026-11-04T05:48:08.417051 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:08.418316 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:08.418319 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:08.418694 [STEEP  ] [I] [    0] STEEP capture: echo #41 saved
+2026-11-04T05:48:08.418695 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=41)
+2026-11-04T05:48:09.419492 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:09.420622 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:09.420625 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:09.421034 [STEEP  ] [I] [    0] STEEP capture: echo #42 saved
+2026-11-04T05:48:09.421036 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=42)
+2026-11-04T05:48:10.421425 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:10.422708 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:10.422712 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:10.423090 [STEEP  ] [I] [    0] STEEP capture: echo #43 saved
+2026-11-04T05:48:10.423091 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=43)
+2026-11-04T05:48:11.425610 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:11.426875 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:11.426879 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:11.427334 [STEEP  ] [I] [    0] STEEP capture: echo #44 saved
+2026-11-04T05:48:11.427336 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=44)
+2026-11-04T05:48:12.428979 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:12.430239 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:12.430242 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:12.430680 [STEEP  ] [I] [    0] STEEP capture: echo #45 saved
+2026-11-04T05:48:12.430682 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=45)
+2026-11-04T05:48:13.432813 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:13.434068 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:13.434072 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:13.434510 [STEEP  ] [I] [    0] STEEP capture: echo #46 saved
+2026-11-04T05:48:13.434512 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=46)
+2026-11-04T05:48:14.435639 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:14.436851 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:14.436854 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:14.437305 [STEEP  ] [I] [    0] STEEP capture: echo #47 saved
+2026-11-04T05:48:14.437307 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=47)
+2026-11-04T05:48:15.437477 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:15.438692 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:15.438696 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:15.439068 [STEEP  ] [I] [    0] STEEP capture: echo #48 saved
+2026-11-04T05:48:15.439070 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=48)
+2026-11-04T05:48:16.440535 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:16.441785 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:16.441788 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:16.442213 [STEEP  ] [I] [    0] STEEP capture: echo #49 saved
+2026-11-04T05:48:16.442215 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=49)
+2026-11-04T05:48:17.442675 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:17.444121 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:17.444124 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:17.444539 [STEEP  ] [I] [    0] STEEP capture: echo #50 saved
+2026-11-04T05:48:17.444541 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=50)
+2026-11-04T05:48:18.445063 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:18.446319 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:18.446324 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:18.446718 [STEEP  ] [I] [    0] STEEP capture: echo #51 saved
+2026-11-04T05:48:18.446720 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=51)
+2026-11-04T05:48:19.448812 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:19.450131 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:19.450135 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:19.450539 [STEEP  ] [I] [    0] STEEP capture: echo #52 saved
+2026-11-04T05:48:19.450540 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=52)
+2026-11-04T05:48:20.451234 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:20.452497 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:20.452501 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:20.452945 [STEEP  ] [I] [    0] STEEP capture: echo #53 saved
+2026-11-04T05:48:20.452947 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=53)
+2026-11-04T05:48:21.454828 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:21.456083 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:21.456087 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:21.456467 [STEEP  ] [I] [    0] STEEP capture: echo #54 saved
+2026-11-04T05:48:21.456468 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=54)
+2026-11-04T05:48:22.458764 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:22.460076 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:22.460080 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:22.460548 [STEEP  ] [I] [    0] STEEP capture: echo #55 saved
+2026-11-04T05:48:22.460550 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=55)
+2026-11-04T05:48:23.461463 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:23.462669 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:23.462672 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:23.463036 [STEEP  ] [I] [    0] STEEP capture: echo #56 saved
+2026-11-04T05:48:23.463038 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=56)
+2026-11-04T05:48:24.463724 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:24.464945 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:24.464949 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:24.465425 [STEEP  ] [I] [    0] STEEP capture: echo #57 saved
+2026-11-04T05:48:24.465426 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=57)
+2026-11-04T05:48:25.465931 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:25.467167 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:25.467171 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:25.467539 [STEEP  ] [I] [    0] STEEP capture: echo #58 saved
+2026-11-04T05:48:25.467540 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=58)
+2026-11-04T05:48:26.468064 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:26.469167 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:26.469170 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:26.469599 [STEEP  ] [I] [    0] STEEP capture: echo #59 saved
+2026-11-04T05:48:26.469601 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=59)
+2026-11-04T05:48:27.471912 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:27.473131 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:27.473134 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:27.473569 [STEEP  ] [I] [    0] STEEP capture: echo #60 saved
+2026-11-04T05:48:27.473571 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=60)
+2026-11-04T05:48:28.475042 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:28.476234 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:28.476238 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:28.476666 [STEEP  ] [I] [    0] STEEP capture: echo #61 saved
+2026-11-04T05:48:28.476668 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=61)
+2026-11-04T05:48:29.477889 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:29.479144 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:29.479147 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:29.479592 [STEEP  ] [I] [    0] STEEP capture: echo #62 saved
+2026-11-04T05:48:29.479593 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=62)
+2026-11-04T05:48:30.482074 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:30.483419 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:30.483422 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:30.483900 [STEEP  ] [I] [    0] STEEP capture: echo #63 saved
+2026-11-04T05:48:30.483901 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=63)
+2026-11-04T05:48:31.485387 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:31.486643 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:31.486646 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:31.487080 [STEEP  ] [I] [    0] STEEP capture: echo #64 saved
+2026-11-04T05:48:31.487082 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=64)
+2026-11-04T05:48:32.487844 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:32.489092 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:32.489096 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:32.489457 [STEEP  ] [I] [    0] STEEP capture: echo #65 saved
+2026-11-04T05:48:32.489458 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=65)
+2026-11-04T05:48:33.489777 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:33.491121 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:33.491124 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:33.491563 [STEEP  ] [I] [    0] STEEP capture: echo #66 saved
+2026-11-04T05:48:33.491564 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=66)
+2026-11-04T05:48:34.492794 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:34.494022 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:34.494026 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:34.494454 [STEEP  ] [I] [    0] STEEP capture: echo #67 saved
+2026-11-04T05:48:34.494456 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=67)
+2026-11-04T05:48:35.495155 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:35.496572 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:35.496575 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:35.497012 [STEEP  ] [I] [    0] STEEP capture: echo #68 saved
+2026-11-04T05:48:35.497014 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=68)
+2026-11-04T05:48:36.499103 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:36.500359 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:36.500363 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:36.500815 [STEEP  ] [I] [    0] STEEP capture: echo #69 saved
+2026-11-04T05:48:36.500817 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=69)
+2026-11-04T05:48:37.501936 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:37.503177 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:37.503181 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:37.503599 [STEEP  ] [I] [    0] STEEP capture: echo #70 saved
+2026-11-04T05:48:37.503601 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=70)
+2026-11-04T05:48:38.505247 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:38.506512 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:38.506515 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:38.506891 [STEEP  ] [I] [    0] STEEP capture: echo #71 saved
+2026-11-04T05:48:38.506893 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=71)
+2026-11-04T05:48:39.508074 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:39.509340 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:39.509344 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:39.509786 [STEEP  ] [I] [    0] STEEP capture: echo #72 saved
+2026-11-04T05:48:39.509787 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=72)
+2026-11-04T05:48:40.510678 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:40.511924 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:40.511928 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:40.512384 [STEEP  ] [I] [    0] STEEP capture: echo #73 saved
+2026-11-04T05:48:40.512386 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=73)
+2026-11-04T05:48:41.513055 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:41.514329 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:41.514333 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:41.514734 [STEEP  ] [I] [    0] STEEP capture: echo #74 saved
+2026-11-04T05:48:41.514735 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=74)
+2026-11-04T05:48:42.515122 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:42.516399 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:42.516402 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:42.516762 [STEEP  ] [I] [    0] STEEP capture: echo #75 saved
+2026-11-04T05:48:42.516764 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=75)
+2026-11-04T05:48:43.517164 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:43.518505 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:43.518509 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:43.518900 [STEEP  ] [I] [    0] STEEP capture: echo #76 saved
+2026-11-04T05:48:43.518901 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=76)
+2026-11-04T05:48:44.520652 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:44.521922 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:44.521926 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:44.522285 [STEEP  ] [I] [    0] STEEP capture: echo #77 saved
+2026-11-04T05:48:44.522286 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=77)
+2026-11-04T05:48:45.523260 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:45.524536 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:45.524540 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:45.524911 [STEEP  ] [I] [    0] STEEP capture: echo #78 saved
+2026-11-04T05:48:45.524912 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=78)
+2026-11-04T05:48:46.526006 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:46.527165 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:46.527168 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:46.527540 [STEEP  ] [I] [    0] STEEP capture: echo #79 saved
+2026-11-04T05:48:46.527541 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=79)
+2026-11-04T05:48:47.527714 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:47.528980 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:47.528984 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:47.529453 [STEEP  ] [I] [    0] STEEP capture: echo #80 saved
+2026-11-04T05:48:47.529455 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=80)
+2026-11-04T05:48:48.531880 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:48.533310 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:48.533314 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:48.533796 [STEEP  ] [I] [    0] STEEP capture: echo #81 saved
+2026-11-04T05:48:48.533797 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=81)
+2026-11-04T05:48:49.535946 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:49.537219 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:49.537223 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:49.537607 [STEEP  ] [I] [    0] STEEP capture: echo #82 saved
+2026-11-04T05:48:49.537608 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=82)
+2026-11-04T05:48:50.538677 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:50.539992 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:50.539995 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:50.540460 [STEEP  ] [I] [    0] STEEP capture: echo #83 saved
+2026-11-04T05:48:50.540462 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=83)
+2026-11-04T05:48:51.541759 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:51.543019 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:51.543023 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:51.543408 [STEEP  ] [I] [    0] STEEP capture: echo #84 saved
+2026-11-04T05:48:51.543409 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=84)
+2026-11-04T05:48:52.545903 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:52.547204 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:52.547208 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:52.547693 [STEEP  ] [I] [    0] STEEP capture: echo #85 saved
+2026-11-04T05:48:52.547694 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=85)
+2026-11-04T05:48:53.550157 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:53.551437 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:53.551441 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:53.551859 [STEEP  ] [I] [    0] STEEP capture: echo #86 saved
+2026-11-04T05:48:53.551860 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=86)
+2026-11-04T05:48:54.553488 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:54.554743 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:54.554747 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:54.555178 [STEEP  ] [I] [    0] STEEP capture: echo #87 saved
+2026-11-04T05:48:54.555180 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=87)
+2026-11-04T05:48:55.556653 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:55.557855 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:55.557858 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:55.558230 [STEEP  ] [I] [    0] STEEP capture: echo #88 saved
+2026-11-04T05:48:55.558232 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=88)
+2026-11-04T05:48:56.558747 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:56.560004 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:56.560008 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:56.560394 [STEEP  ] [I] [    0] STEEP capture: echo #89 saved
+2026-11-04T05:48:56.560396 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=89)
+2026-11-04T05:48:57.560872 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:57.562153 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:57.562157 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:57.562587 [STEEP  ] [I] [    0] STEEP capture: echo #90 saved
+2026-11-04T05:48:57.562588 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=90)
+2026-11-04T05:48:58.562821 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:58.564172 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:58.564176 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:58.564613 [STEEP  ] [I] [    0] STEEP capture: echo #91 saved
+2026-11-04T05:48:58.564615 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=91)
+2026-11-04T05:48:59.565152 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:48:59.566496 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:48:59.566499 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:48:59.566904 [STEEP  ] [I] [    0] STEEP capture: echo #92 saved
+2026-11-04T05:48:59.566905 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=92)
+2026-11-04T05:49:00.568321 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:00.569621 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:00.569624 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:00.570025 [STEEP  ] [I] [    0] STEEP capture: echo #93 saved
+2026-11-04T05:49:00.570026 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=93)
+2026-11-04T05:49:01.571093 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:01.572436 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:01.572440 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:01.572906 [STEEP  ] [I] [    0] STEEP capture: echo #94 saved
+2026-11-04T05:49:01.572908 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=94)
+2026-11-04T05:49:02.574759 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:02.576029 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:02.576032 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:02.576431 [STEEP  ] [I] [    0] STEEP capture: echo #95 saved
+2026-11-04T05:49:02.576432 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=95)
+2026-11-04T05:49:03.578466 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:03.579688 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:03.579691 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:03.580158 [STEEP  ] [I] [    0] STEEP capture: echo #96 saved
+2026-11-04T05:49:03.580159 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=96)
+2026-11-04T05:49:04.580325 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:04.581541 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:04.581545 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:04.581996 [STEEP  ] [I] [    0] STEEP capture: echo #97 saved
+2026-11-04T05:49:04.581998 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=97)
+2026-11-04T05:49:05.582206 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:05.583468 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:05.583471 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:05.583891 [STEEP  ] [I] [    0] STEEP capture: echo #98 saved
+2026-11-04T05:49:05.583893 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=98)
+2026-11-04T05:49:06.584304 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:06.585575 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:06.585579 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:06.586039 [STEEP  ] [I] [    0] STEEP capture: echo #99 saved
+2026-11-04T05:49:06.586040 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=99)
+2026-11-04T05:49:07.587876 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:07.589126 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:07.589129 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:07.589487 [STEEP  ] [I] [    0] STEEP capture: echo #100 saved
+2026-11-04T05:49:07.589488 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=100)
+2026-11-04T05:49:08.589898 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:08.591131 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:08.591135 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:08.591584 [STEEP  ] [I] [    0] STEEP capture: echo #101 saved
+2026-11-04T05:49:08.591586 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=101)
+2026-11-04T05:49:09.592312 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:09.593621 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:09.593625 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:09.594103 [STEEP  ] [I] [    0] STEEP capture: echo #102 saved
+2026-11-04T05:49:09.594105 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=102)
+2026-11-04T05:49:10.595246 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:10.596582 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:10.596586 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:10.596966 [STEEP  ] [I] [    0] STEEP capture: echo #103 saved
+2026-11-04T05:49:10.596967 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=103)
+2026-11-04T05:49:11.597628 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:11.598888 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:11.598891 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:11.599314 [STEEP  ] [I] [    0] STEEP capture: echo #104 saved
+2026-11-04T05:49:11.599316 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=104)
+2026-11-04T05:49:12.599685 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:12.600931 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:12.600934 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:12.601401 [STEEP  ] [I] [    0] STEEP capture: echo #105 saved
+2026-11-04T05:49:12.601402 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=105)
+2026-11-04T05:49:13.603227 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:13.604497 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:13.604501 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:13.604887 [STEEP  ] [I] [    0] STEEP capture: echo #106 saved
+2026-11-04T05:49:13.604889 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=106)
+2026-11-04T05:49:14.607179 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:14.608411 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:14.608414 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:14.608802 [STEEP  ] [I] [    0] STEEP capture: echo #107 saved
+2026-11-04T05:49:14.608804 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=107)
+2026-11-04T05:49:15.609572 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:15.610839 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:15.610842 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:15.611283 [STEEP  ] [I] [    0] STEEP capture: echo #108 saved
+2026-11-04T05:49:15.611285 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=108)
+2026-11-04T05:49:16.611983 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:16.613242 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:16.613245 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:16.613687 [STEEP  ] [I] [    0] STEEP capture: echo #109 saved
+2026-11-04T05:49:16.613688 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=109)
+2026-11-04T05:49:17.615566 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:17.616819 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:17.616822 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:17.617196 [STEEP  ] [I] [    0] STEEP capture: echo #110 saved
+2026-11-04T05:49:17.617198 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=110)
+2026-11-04T05:49:18.619174 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:18.620385 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:18.620389 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:18.620757 [STEEP  ] [I] [    0] STEEP capture: echo #111 saved
+2026-11-04T05:49:18.620759 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=111)
+2026-11-04T05:49:19.622992 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:19.624252 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:19.624256 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:19.624755 [STEEP  ] [I] [    0] STEEP capture: echo #112 saved
+2026-11-04T05:49:19.624757 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=112)
+2026-11-04T05:49:20.627291 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:20.628620 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:20.628624 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:20.628991 [STEEP  ] [I] [    0] STEEP capture: echo #113 saved
+2026-11-04T05:49:20.628992 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=113)
+2026-11-04T05:49:21.630724 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:21.631955 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:21.631959 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:21.632407 [STEEP  ] [I] [    0] STEEP capture: echo #114 saved
+2026-11-04T05:49:21.632408 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=114)
+2026-11-04T05:49:22.632491 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:22.633650 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:22.633653 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:22.634092 [STEEP  ] [I] [    0] STEEP capture: echo #115 saved
+2026-11-04T05:49:22.634094 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=115)
+2026-11-04T05:49:23.636589 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:23.637911 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:23.637915 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:23.638294 [STEEP  ] [I] [    0] STEEP capture: echo #116 saved
+2026-11-04T05:49:23.638295 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=116)
+2026-11-04T05:49:24.639193 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:24.640481 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:24.640485 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:24.640852 [STEEP  ] [I] [    0] STEEP capture: echo #117 saved
+2026-11-04T05:49:24.640853 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=117)
+2026-11-04T05:49:25.642229 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:25.643540 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:25.643544 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:25.643921 [STEEP  ] [I] [    0] STEEP capture: echo #118 saved
+2026-11-04T05:49:25.643923 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=118)
+2026-11-04T05:49:26.645174 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:26.646174 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:26.646177 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:26.646603 [STEEP  ] [I] [    0] STEEP capture: echo #119 saved
+2026-11-04T05:49:26.646605 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=119)
+2026-11-04T05:49:27.648685 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:27.650011 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:27.650014 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:27.650367 [STEEP  ] [I] [    0] STEEP capture: echo #120 saved
+2026-11-04T05:49:27.650368 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=120)
+2026-11-04T05:49:28.651616 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:28.652843 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:28.652847 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:28.653225 [STEEP  ] [I] [    0] STEEP capture: echo #121 saved
+2026-11-04T05:49:28.653226 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=121)
+2026-11-04T05:49:29.654874 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:29.656141 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:29.656144 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:29.656550 [STEEP  ] [I] [    0] STEEP capture: echo #122 saved
+2026-11-04T05:49:29.656552 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=122)
+2026-11-04T05:49:30.658367 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:30.659599 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:30.659602 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:30.659979 [STEEP  ] [I] [    0] STEEP capture: echo #123 saved
+2026-11-04T05:49:30.659980 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=123)
+2026-11-04T05:49:31.660762 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:31.662015 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:31.662018 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:31.662526 [STEEP  ] [I] [    0] STEEP capture: echo #124 saved
+2026-11-04T05:49:31.662528 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=124)
+2026-11-04T05:49:32.664816 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:32.666081 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:32.666085 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:32.666473 [STEEP  ] [I] [    0] STEEP capture: echo #125 saved
+2026-11-04T05:49:32.666474 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=125)
+2026-11-04T05:49:33.669040 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:33.670303 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:33.670307 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:33.670670 [STEEP  ] [I] [    0] STEEP capture: echo #126 saved
+2026-11-04T05:49:33.670671 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=126)
+2026-11-04T05:49:34.670832 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:34.672102 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:34.672106 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:34.672518 [STEEP  ] [I] [    0] STEEP capture: echo #127 saved
+2026-11-04T05:49:34.672519 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=127)
+2026-11-04T05:49:35.672743 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:35.673999 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:35.674003 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:35.674353 [STEEP  ] [I] [    0] STEEP capture: echo #128 saved
+2026-11-04T05:49:35.674355 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=128)
+2026-11-04T05:49:36.676462 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:36.677736 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:36.677740 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:36.678154 [STEEP  ] [I] [    0] STEEP capture: echo #129 saved
+2026-11-04T05:49:36.678156 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=129)
+2026-11-04T05:49:37.679180 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:37.680494 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:37.680497 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:37.680874 [STEEP  ] [I] [    0] STEEP capture: echo #130 saved
+2026-11-04T05:49:37.680876 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=130)
+2026-11-04T05:49:38.682471 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:38.683740 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:38.683744 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:38.684214 [STEEP  ] [I] [    0] STEEP capture: echo #131 saved
+2026-11-04T05:49:38.684216 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=131)
+2026-11-04T05:49:39.684300 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:39.685531 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:39.685534 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:39.685979 [STEEP  ] [I] [    0] STEEP capture: echo #132 saved
+2026-11-04T05:49:39.685981 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=132)
+2026-11-04T05:49:40.688261 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:40.689490 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:40.689494 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:40.690090 [STEEP  ] [I] [    0] STEEP capture: echo #133 saved
+2026-11-04T05:49:40.690093 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=133)
+2026-11-04T05:49:41.690449 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:41.691704 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:41.691708 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:41.692141 [STEEP  ] [I] [    0] STEEP capture: echo #134 saved
+2026-11-04T05:49:41.692142 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=134)
+2026-11-04T05:49:42.694467 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:42.695732 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:42.695736 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:42.696178 [STEEP  ] [I] [    0] STEEP capture: echo #135 saved
+2026-11-04T05:49:42.696179 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=135)
+2026-11-04T05:49:43.698068 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:43.699363 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:43.699366 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:43.699771 [STEEP  ] [I] [    0] STEEP capture: echo #136 saved
+2026-11-04T05:49:43.699772 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=136)
+2026-11-04T05:49:44.700261 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:44.701519 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:44.701523 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:44.702001 [STEEP  ] [I] [    0] STEEP capture: echo #137 saved
+2026-11-04T05:49:44.702003 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=137)
+2026-11-04T05:49:45.704014 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:45.705268 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:45.705272 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:45.705716 [STEEP  ] [I] [    0] STEEP capture: echo #138 saved
+2026-11-04T05:49:45.705718 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=138)
+2026-11-04T05:49:46.705794 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:46.707009 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:46.707012 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:46.707470 [STEEP  ] [I] [    0] STEEP capture: echo #139 saved
+2026-11-04T05:49:46.707472 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=139)
+2026-11-04T05:49:47.707903 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:47.709266 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:47.709269 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:47.709645 [STEEP  ] [I] [    0] STEEP capture: echo #140 saved
+2026-11-04T05:49:47.709646 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=140)
+2026-11-04T05:49:48.711560 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:48.712813 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:48.712817 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:48.713249 [STEEP  ] [I] [    0] STEEP capture: echo #141 saved
+2026-11-04T05:49:48.713251 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=141)
+2026-11-04T05:49:49.714179 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:49.715397 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:49.715400 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:49.715762 [STEEP  ] [I] [    0] STEEP capture: echo #142 saved
+2026-11-04T05:49:49.715764 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=142)
+2026-11-04T05:49:50.716770 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:50.718034 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:50.718037 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:50.718491 [STEEP  ] [I] [    0] STEEP capture: echo #143 saved
+2026-11-04T05:49:50.718493 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=143)
+2026-11-04T05:49:51.718533 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:51.719754 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:51.719759 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:51.720123 [STEEP  ] [I] [    0] STEEP capture: echo #144 saved
+2026-11-04T05:49:51.720125 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=144)
+2026-11-04T05:49:52.721088 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:52.722411 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:52.722415 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:52.722809 [STEEP  ] [I] [    0] STEEP capture: echo #145 saved
+2026-11-04T05:49:52.722811 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=145)
+2026-11-04T05:49:53.725104 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:53.726343 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:53.726346 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:53.726705 [STEEP  ] [I] [    0] STEEP capture: echo #146 saved
+2026-11-04T05:49:53.726706 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=146)
+2026-11-04T05:49:54.728905 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:54.730189 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:54.730193 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:54.730615 [STEEP  ] [I] [    0] STEEP capture: echo #147 saved
+2026-11-04T05:49:54.730616 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=147)
+2026-11-04T05:49:55.733149 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:55.734344 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:55.734347 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:55.734775 [STEEP  ] [I] [    0] STEEP capture: echo #148 saved
+2026-11-04T05:49:55.734777 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=148)
+2026-11-04T05:49:56.735711 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:56.737031 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:56.737035 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:56.737517 [STEEP  ] [I] [    0] STEEP capture: echo #149 saved
+2026-11-04T05:49:56.737519 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=149)
+2026-11-04T05:49:57.738312 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:57.739569 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:57.739573 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:57.740020 [STEEP  ] [I] [    0] STEEP capture: echo #150 saved
+2026-11-04T05:49:57.740021 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=150)
+2026-11-04T05:49:58.740290 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:58.741646 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:58.741650 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:58.742119 [STEEP  ] [I] [    0] STEEP capture: echo #151 saved
+2026-11-04T05:49:58.742121 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=151)
+2026-11-04T05:49:59.743734 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:49:59.744981 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:49:59.744985 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:49:59.745427 [STEEP  ] [I] [    0] STEEP capture: echo #152 saved
+2026-11-04T05:49:59.745428 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=152)
+2026-11-04T05:50:00.746121 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:00.747474 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:50:00.747477 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:00.747944 [STEEP  ] [I] [    0] STEEP capture: echo #153 saved
+2026-11-04T05:50:00.747946 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=153)
+2026-11-04T05:50:01.750309 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:01.751655 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:50:01.751659 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:01.752109 [STEEP  ] [I] [    0] STEEP capture: echo #154 saved
+2026-11-04T05:50:01.752111 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=154)
+2026-11-04T05:50:02.754310 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:02.755576 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:50:02.755581 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:02.756015 [STEEP  ] [I] [    0] STEEP capture: echo #155 saved
+2026-11-04T05:50:02.756017 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=155)
+2026-11-04T05:50:03.756505 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:03.757841 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:50:03.757844 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:03.758206 [STEEP  ] [I] [    0] STEEP capture: echo #156 saved
+2026-11-04T05:50:03.758207 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=156)
+2026-11-04T05:50:04.760187 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:04.761476 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:50:04.761479 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:04.761869 [STEEP  ] [I] [    0] STEEP capture: echo #157 saved
+2026-11-04T05:50:04.761871 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=157)
+2026-11-04T05:50:05.761893 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:05.763098 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:50:05.763102 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:05.763498 [STEEP  ] [I] [    0] STEEP capture: echo #158 saved
+2026-11-04T05:50:05.763500 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=158)
+2026-11-04T05:50:06.763686 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:06.764959 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:50:06.764963 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:06.765347 [STEEP  ] [I] [    0] STEEP capture: echo #159 saved
+2026-11-04T05:50:06.765350 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=159)
+2026-11-04T05:50:07.765884 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:07.767118 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:50:07.767122 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:07.769839 [STEEP  ] [I] [    0] STEEP capture: echo #160 saved
+2026-11-04T05:50:07.769841 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=160)
+2026-11-04T05:50:08.772258 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:08.773396 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=1.00e+06
+2026-11-04T05:50:08.773399 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=1.00e+06, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:08.773805 [STEEP  ] [I] [    0] STEEP capture: echo #161 saved
+2026-11-04T05:50:08.773807 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=1.00e+06 total_echoes=161)
+2026-11-04T05:50:11.407318 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:11.410185 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=9.90e+05
+2026-11-04T05:50:11.410193 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=9.90e+05, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:11.411022 [STEEP  ] [I] [    0] STEEP capture: echo #162 saved
+2026-11-04T05:50:11.411025 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=9.90e+05 total_echoes=162)
+2026-11-04T05:50:13.411341 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:13.414373 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=9.90e+05
+2026-11-04T05:50:13.414380 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=9.90e+05, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:13.415184 [STEEP  ] [I] [    0] STEEP capture: echo #163 saved
+2026-11-04T05:50:13.415189 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=9.90e+05 total_echoes=163)
+2026-11-04T05:50:15.415530 [STEEP  ] [I] [    0] STEEP [BOB]: echo cooldown expired — listening resumed
+2026-11-04T05:50:15.418981 [STEEP  ] [I] [    0] STEEP [BOB]: preamble at offset=0, gain=9.62e+05
+2026-11-04T05:50:15.418990 [STEEP  ] [W] [    0] STEEP [BOB]: preamble detected, gain=9.62e+05, probe buffered (N=1024) — echo queued
+2026-11-04T05:50:15.419822 [STEEP  ] [I] [    0] STEEP capture: echo #164 saved
+2026-11-04T05:50:15.419824 [STEEP  ] [W] [    0] STEEP [BOB]: echo transmitted (C1=0.50 gain=9.62e+05 total_echoes=164)
+2026-11-04T05:50:17.433268 [COMN   ] [D] [    0] RxSockets: Closing rx socket handler thread
+2026-11-04T05:50:17.435419 [COMN   ] [D] [    0] RxSockets: closed.
+2026-11-04T05:50:17.435493 [COMN   ] [D] [    0] Socket=7 was closed.
+2026-11-04T05:50:17.438588 [COMN   ] [D] [    0] Socket=-1 could not be closed.
+2026-11-04T05:50:17.439504 [COMN   ] [D] [    0] Socket=-1 could not be closed.

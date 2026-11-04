@@ -5,9 +5,9 @@
 #include <chrono>
 #include <complex>
 #include <cstdint>
-#include <cstdio>   // FILE*
+#include <cstdio>
 #include <mutex>
-#include <random>   // std::mt19937
+#include <random>
 #include <vector>
 #include "srsran/srslog/srslog.h"
 
@@ -65,9 +65,13 @@ public:
 
   void set_role(steep_role_t role) {
     role_ = role;
-    // Alice and Bob must NOT share an RNG seed: if they did, Bob's secret bits
-    // would equal Alice's probe signs and the echo would reveal itself.
-    rng_.seed(role == steep_role_t::BOB ? 4242u : 42u);
+    // Fresh randomness every run. Each node draws its own seed, so Node-1's probe
+    // and Node-2's secret are independent. Seed is logged to reproduce a run.
+    std::random_device rd;
+    rng_seed_ = rd();
+    rng_.seed(rng_seed_);
+    logger_.warning("STEEP: role=%s RNG seed=%u",
+                    role == steep_role_t::BOB ? "node-2" : "node-1", rng_seed_);
   }
   void set_secret(const std::vector<uint8_t>& secret) { secret_ = secret; }
   void set_payload_size(uint32_t n)                   { payload_size_ = n; }
@@ -180,6 +184,14 @@ private:
   FILE*    probe_capture_fp_       = nullptr;   // /tmp/steep_alice_probe.iq
   FILE*    echo_capture_fp_        = nullptr;   // /tmp/steep_bob_echo.iq
   FILE*    bob_rx_capture_fp_      = nullptr;   // /tmp/steep_bob_rx.iq
+  FILE*    x1_capture_fp_          = nullptr;   // /tmp/steep_x1.iq
+  FILE*    s2_capture_fp_          = nullptr;   // /tmp/steep_s2.iq
+  FILE*    x1_unit_capture_fp_     = nullptr;   // /tmp/steep_x1_unit.iq
+  FILE*    s2_unit_capture_fp_     = nullptr;   // /tmp/steep_s2_unit.iq
+  FILE*    x1_full_capture_fp_      = nullptr;   // /tmp/steep_x1_full.iq
+  FILE*    x1_full_unit_capture_fp_ = nullptr;   // /tmp/steep_x1_full_unit.iq
+  FILE*    s2_full_capture_fp_      = nullptr;   // /tmp/steep_s2_full.iq
+  FILE*    s2_full_unit_capture_fp_ = nullptr;   // /tmp/steep_s2_full_unit.iq
 
   // ── RNG ──────────────────────────────────────────────────────────────────────
   uint32_t     rng_seed_ = 42u;
