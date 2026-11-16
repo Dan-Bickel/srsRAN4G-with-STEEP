@@ -87,6 +87,7 @@ lib/test/rlc/rlc_common_test: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 lib/test/rlc/rlc_common_test: lib/src/support/libsupport.a
 lib/test/rlc/rlc_common_test: lib/src/srslog/libsrslog.a
 lib/test/rlc/rlc_common_test: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+lib/test/rlc/rlc_common_test: /usr/lib/x86_64-linux-gnu/libsctp.so
 lib/test/rlc/rlc_common_test: lib/test/rlc/CMakeFiles/rlc_common_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable rlc_common_test"
 	cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/lib/test/rlc && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rlc_common_test.dir/link.txt --verbose=$(VERBOSE)

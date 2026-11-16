@@ -86,6 +86,7 @@ lib/src/phy/ch_estimation/test/refsignal_ul_test_all: /usr/lib/x86_64-linux-gnu/
 lib/src/phy/ch_estimation/test/refsignal_ul_test_all: lib/src/support/libsupport.a
 lib/src/phy/ch_estimation/test/refsignal_ul_test_all: lib/src/srslog/libsrslog.a
 lib/src/phy/ch_estimation/test/refsignal_ul_test_all: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+lib/src/phy/ch_estimation/test/refsignal_ul_test_all: /usr/lib/x86_64-linux-gnu/libsctp.so
 lib/src/phy/ch_estimation/test/refsignal_ul_test_all: lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable refsignal_ul_test_all"
 	cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/lib/src/phy/ch_estimation/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/refsignal_ul_test_all.dir/link.txt --verbose=$(VERBOSE)

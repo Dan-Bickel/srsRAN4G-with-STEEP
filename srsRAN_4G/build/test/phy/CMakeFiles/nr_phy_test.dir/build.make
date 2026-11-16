@@ -88,7 +88,9 @@ test/phy/nr_phy_test: srsenb/src/phy/libsrsenb_phy.a
 test/phy/nr_phy_test: srsgnb/src/stack/mac/libsrsgnb_mac.a
 test/phy/nr_phy_test: lib/src/mac/libsrsran_mac.a
 test/phy/nr_phy_test: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
+test/phy/nr_phy_test: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 test/phy/nr_phy_test: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
+test/phy/nr_phy_test: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 test/phy/nr_phy_test: lib/src/phy/rf/libsrsran_rf.so.25.10.0
 test/phy/nr_phy_test: lib/src/phy/rf/libsrsran_rf_utils.a
 test/phy/nr_phy_test: lib/src/asn1/librrc_nr_asn1.a
@@ -99,6 +101,7 @@ test/phy/nr_phy_test: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 test/phy/nr_phy_test: lib/src/support/libsupport.a
 test/phy/nr_phy_test: lib/src/srslog/libsrslog.a
 test/phy/nr_phy_test: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+test/phy/nr_phy_test: /usr/lib/x86_64-linux-gnu/libsctp.so
 test/phy/nr_phy_test: srsenb/src/stack/mac/common/libsrsenb_mac_common.a
 test/phy/nr_phy_test: test/phy/CMakeFiles/nr_phy_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable nr_phy_test"

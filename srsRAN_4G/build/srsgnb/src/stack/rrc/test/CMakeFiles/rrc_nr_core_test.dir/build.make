@@ -92,6 +92,7 @@ srsgnb/src/stack/rrc/test/rrc_nr_core_test: lib/src/gtpu/libsrsran_gtpu.a
 srsgnb/src/stack/rrc/test/rrc_nr_core_test: srsenb/src/stack/upper/libsrsenb_upper.a
 srsgnb/src/stack/rrc/test/rrc_nr_core_test: /usr/lib/x86_64-linux-gnu/libsctp.so
 srsgnb/src/stack/rrc/test/rrc_nr_core_test: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
+srsgnb/src/stack/rrc/test/rrc_nr_core_test: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 srsgnb/src/stack/rrc/test/rrc_nr_core_test: srsenb/src/stack/rrc/libsrsenb_rrc.a
 srsgnb/src/stack/rrc/test/rrc_nr_core_test: srsenb/src/common/libsrsenb_common.a
 srsgnb/src/stack/rrc/test/rrc_nr_core_test: lib/src/asn1/librrc_asn1.a
@@ -111,6 +112,7 @@ srsgnb/src/stack/rrc/test/rrc_nr_core_test: /usr/lib/x86_64-linux-gnu/libfftw3f.
 srsgnb/src/stack/rrc/test/rrc_nr_core_test: lib/src/support/libsupport.a
 srsgnb/src/stack/rrc/test/rrc_nr_core_test: lib/src/srslog/libsrslog.a
 srsgnb/src/stack/rrc/test/rrc_nr_core_test: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+srsgnb/src/stack/rrc/test/rrc_nr_core_test: /usr/lib/x86_64-linux-gnu/libsctp.so
 srsgnb/src/stack/rrc/test/rrc_nr_core_test: lib/src/asn1/libsrsran_asn1.a
 srsgnb/src/stack/rrc/test/rrc_nr_core_test: srsgnb/src/stack/rrc/test/CMakeFiles/rrc_nr_core_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable rrc_nr_core_test"

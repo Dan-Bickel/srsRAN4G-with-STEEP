@@ -66,9 +66,9 @@ public:
   // ==== STEEP enabler ===
   void steep_enable(bool enable) { steep_enabled_ = enable; }
 
-  void steep_set_role(bool alice) {
-  steep_mgr_.set_role(alice ? srsran::steep_role_t::ALICE
-                             : srsran::steep_role_t::BOB);
+  void steep_set_role(bool node1) {
+  steep_mgr_.set_role(node1 ? srsran::steep_role_t::NODE1
+                             : srsran::steep_role_t::NODE2);
   }
   void steep_set_secret(const std::vector<uint8_t>& s) { steep_mgr_.set_secret(s); }
 

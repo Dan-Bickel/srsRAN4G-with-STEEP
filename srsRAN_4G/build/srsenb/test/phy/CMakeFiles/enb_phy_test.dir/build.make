@@ -83,6 +83,7 @@ srsenb/test/phy/enb_phy_test: srsenb/src/phy/libsrsenb_phy.a
 srsenb/test/phy/enb_phy_test: lib/src/phy/libsrsran_phy.a
 srsenb/test/phy/enb_phy_test: lib/src/asn1/librrc_asn1.a
 srsenb/test/phy/enb_phy_test: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
+srsenb/test/phy/enb_phy_test: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 srsenb/test/phy/enb_phy_test: lib/src/asn1/libasn1_utils.a
 srsenb/test/phy/enb_phy_test: lib/src/common/libsrsran_common.a
 srsenb/test/phy/enb_phy_test: lib/src/phy/libsrsran_phy.a
@@ -90,6 +91,7 @@ srsenb/test/phy/enb_phy_test: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 srsenb/test/phy/enb_phy_test: lib/src/support/libsupport.a
 srsenb/test/phy/enb_phy_test: lib/src/srslog/libsrslog.a
 srsenb/test/phy/enb_phy_test: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+srsenb/test/phy/enb_phy_test: /usr/lib/x86_64-linux-gnu/libsctp.so
 srsenb/test/phy/enb_phy_test: srsenb/test/phy/CMakeFiles/enb_phy_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable enb_phy_test"
 	cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsenb/test/phy && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/enb_phy_test.dir/link.txt --verbose=$(VERBOSE)

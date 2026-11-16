@@ -163,6 +163,7 @@ srsue/src/srsue: lib/src/system/libsystem.a
 srsue/src/srsue: lib/src/asn1/librrc_nr_asn1.a
 srsue/src/srsue: lib/src/asn1/libngap_nr_asn1.a
 srsue/src/srsue: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
+srsue/src/srsue: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 srsue/src/srsue: lib/src/asn1/libnas_5g_msg.a
 srsue/src/srsue: srsue/src/stack/mac_common/libsrsue_mac_common.a
 srsue/src/srsue: lib/src/phy/rf/libsrsran_rf.so.25.10.0
@@ -175,6 +176,7 @@ srsue/src/srsue: lib/src/phy/libsrsran_phy.a
 srsue/src/srsue: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 srsue/src/srsue: lib/src/support/libsupport.a
 srsue/src/srsue: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+srsue/src/srsue: /usr/lib/x86_64-linux-gnu/libsctp.so
 srsue/src/srsue: srsue/src/CMakeFiles/srsue.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable srsue"
 	cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsue/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsue.dir/link.txt --verbose=$(VERBOSE)

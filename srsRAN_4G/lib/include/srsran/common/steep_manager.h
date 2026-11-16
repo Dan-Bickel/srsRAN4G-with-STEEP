@@ -13,10 +13,23 @@
 
 namespace srsran {
 
-// Three states: Alice sits in PROBING while awaiting an echo;
-// Bob sits in ECHOING while the echo is queued for the next TX callback.
+// Three states: Node-1 sits in PROBING while awaiting an echo;
+// Node-2 sits in ECHOING while the echo is queued for the next TX callback.
 enum class steep_state_t { IDLE, PROBING, ECHOING };
-enum class steep_role_t  { ALICE, BOB };
+enum class steep_role_t  { NODE1, NODE2 };
+
+// Which STEEP scheme a run uses.  BOTH nodes must be started in the same mode.
+//   MULTIPLICATIVE  P-STEEP (arXiv 2410.03515 Sec. IV): Node-2 echoes the secret sign times
+//                   its soft estimate of the probe:   x2 = C1 * s * y1_norm,  s = +/-1.
+//                   Node-1 decodes with sign(rx * x1).
+//   ADDITIVE        G-STEEP-style (arXiv 2410.03515 Sec. III; arXiv 2309.14529 Sec. III):
+//                   Node-2 echoes its soft probe estimate plus the secret:
+//                                                     x2 = C1 * y1_norm + C2 * s.
+//                   Node-1 removes C1 * x1 (its own known probe) and decodes the leftover.
+//                   NOTE: the paper's G-STEEP uses a Gaussian secret; here s is +/-1,
+//                   so this is an approximation of the analyzed scheme.
+// Selected at startup from the STEEP_MODE environment variable (see steep_manager.cpp).
+enum class steep_mode_t  { MULTIPLICATIVE, ADDITIVE };
 
 class steep_manager
 {
@@ -29,7 +42,7 @@ public:
   static constexpr uint32_t PREAMBLE_LEN = 64u;
 
   // Probe body: PROBE_LEN uniform-random real samples following the preamble,
-  // also on the Q channel.  Bob buffers these as y1 and forwards them as x2.
+  // also on the Q channel.  Node-2 buffers these as y1 and forwards them as x2.
   static constexpr uint32_t PROBE_LEN   = 1024u;
 
   // Total samples consumed / produced per STEEP frame.
@@ -39,10 +52,12 @@ public:
   static constexpr float    STEEP_AMP   = 0.5f;   // preamble chip amplitude
   static constexpr float    BPSK_AMP    = 0.1f;   // BPSK secret chip amplitude
 
-  // AF mixing: x2 = C1 * y1_norm + C2 * s2
-  // C1 forward-scales the received probe; C2 scales the secret contribution.
-  // Both are compile-time constants for the initial implementation; tune them
-  // in Step 4 once a round-trip is confirmed working.
+  // Echo scaling (see steep_mode_t above).
+  //   C1: scale applied to Node-2's soft probe estimate (both modes).
+  //   C2: amplitude of the +/-1 secret in ADDITIVE mode only (unused in MULTIPLICATIVE).
+  // Both are compile-time constants; tune them once a round trip works.
+  // BPSK_AMP is a leftover from the old scheme; it is only used by the placeholder
+  // MSE log metric in MULTIPLICATIVE mode (offline analysis is the authority).
   static constexpr float    C1          = 0.5f;
   static constexpr float    C2          = 0.3f;
 
@@ -70,16 +85,25 @@ public:
     std::random_device rd;
     rng_seed_ = rd();
     rng_.seed(rng_seed_);
-    logger_.warning("STEEP: role=%s RNG seed=%u",
-                    role == steep_role_t::BOB ? "node-2" : "node-1", rng_seed_);
+    logger_.warning("STEEP: role=%s mode=%s RNG seed=%u",
+                    role == steep_role_t::NODE2 ? "node-2" : "node-1",
+                    mode_name(mode_), rng_seed_);
+  }
+
+  // Scheme selection.  Normally set from the STEEP_MODE environment variable in the
+  // constructor; call set_mode() before traffic starts to override from code.
+  void set_mode(steep_mode_t m);
+  steep_mode_t get_mode() const { return mode_; }
+  static const char* mode_name(steep_mode_t m) {
+    return m == steep_mode_t::ADDITIVE ? "additive" : "multiplicative";
   }
   void set_secret(const std::vector<uint8_t>& secret) { secret_ = secret; }
   void set_payload_size(uint32_t n)                   { payload_size_ = n; }
 
-  // IQ capture (call in ue.cc to record Alice's probe and echo for Eve).
+  // IQ capture (call in ue.cc to record Node-1's probe and echo for Eve).
   void set_capture_enabled(bool en) { capture_enabled_ = en; }
 
-  // RNG seed (drives Alice's random probe).  seed=0 → non-deterministic; seed≠0 → fixed (default 42).
+  // RNG seed (drives Node-1's random probe).  seed=0 → non-deterministic; seed≠0 → fixed (default 42).
   void set_rng_seed(uint32_t seed);
 
   steep_state_t get_state() const;
@@ -114,10 +138,10 @@ private:
   float estimate_gain(const cf_t* rx_preamble) const;
 
   // ── Role handlers (called under mtx_) ───────────────────────────────────────
-  void handle_tx_alice(cf_t* samples, uint32_t nof_samples);
-  void handle_rx_alice(const cf_t* samples, uint32_t nof_samples);
-  void handle_rx_bob  (const cf_t* samples, uint32_t nof_samples);
-  void handle_tx_bob  (cf_t* samples, uint32_t nof_samples);
+  void handle_tx_node1(cf_t* samples, uint32_t nof_samples);
+  void handle_rx_node1(const cf_t* samples, uint32_t nof_samples);
+  void handle_rx_node2  (const cf_t* samples, uint32_t nof_samples);
+  void handle_tx_node2  (cf_t* samples, uint32_t nof_samples);
 
   // ── IQ capture ──────────────────────────────────────────────────────────────
   void write_capture_frame(FILE*& fp, const char* path,
@@ -128,31 +152,33 @@ private:
   // ── Core state ───────────────────────────────────────────────────────────────
   mutable std::mutex       mtx_;
   steep_state_t            state_        = steep_state_t::IDLE;
-  steep_role_t             role_         = steep_role_t::ALICE;
+  steep_role_t             role_         = steep_role_t::NODE1;
+  steep_mode_t             mode_         = steep_mode_t::MULTIPLICATIVE;
+  bool                     enabled_      = true;   // false when STEEP_ENABLE=0 (hooks do nothing)
   std::array<uint8_t, 32>  session_key_{};
   std::vector<uint8_t>     secret_;
   uint32_t                 payload_size_ = 32u;   // secret length in bytes (32 B = 256 bits)
   uint32_t                 next_probe_id_ = 1u;
   uint32_t                 tx_call_count_ = 0u;
 
-  // ── Alice-specific state ─────────────────────────────────────────────────────
-  // alice_probe_buf_: the PROBE_LEN random samples Alice transmitted (x1).
+  // ── Node-1-specific state ─────────────────────────────────────────────────────
+  // node1_probe_buf_: the PROBE_LEN random samples Node-1 transmitted (x1).
   // Stored as cf_t with real=0 for uniform access via .imag().
-  std::vector<cf_t>  alice_probe_buf_;
-  uint32_t           alice_probe_id_  = 0u;
-  float              alice_gain_est_  = 1.0f;  // estimated Bob→Alice channel gain
-  float              mse_alice_       = 0.0f;  // MSE_A from most-recent echo decode
+  std::vector<cf_t>  node1_probe_buf_;
+  uint32_t           node1_probe_id_  = 0u;
+  float              node1_gain_est_  = 1.0f;  // estimated Node-2→Node-1 channel gain
+  float              mse_node1_       = 0.0f;  // MSE_A from most-recent echo decode
 
-  // ── Bob-specific state ───────────────────────────────────────────────────────
-  // bob_probe_buf_: y1_norm = y1 / Ĝ (gain-normalised received probe).
-  std::vector<cf_t>  bob_probe_buf_;
-  uint32_t           bob_probe_id_        = 0u;
-  float              gain_estimate_       = 1.0f;  // estimated Alice→Bob channel gain
+  // ── Node-2-specific state ───────────────────────────────────────────────────────
+  // node2_probe_buf_: y1_norm = y1 / Ĝ (gain-normalised received probe).
+  std::vector<cf_t>  node2_probe_buf_;
+  uint32_t           node2_probe_id_        = 0u;
+  float              gain_estimate_       = 1.0f;  // estimated Node-1→Node-2 channel gain
   bool               echo_ready_          = false;
   bool               echo_cooldown_active_ = false;  // true for 200 ms after echo TX
   clock_t::time_point last_echo_time_{};             // timestamp of most-recent echo TX
 
-  // ── Timing (primarily Alice-side; Bob uses echo_cooldown only) ──────────────
+  // ── Timing (primarily Node-1-side; Node-2 uses echo_cooldown only) ──────────────
   clock_t::time_point start_time_{};
   clock_t::time_point last_probe_time_{};
   clock_t::time_point probing_since_time_{};
@@ -168,22 +194,23 @@ private:
   uint32_t probes_recovered_ = 0u;
   uint32_t echoes_sent_      = 0u;
   uint32_t probes_timed_out_ = 0u;
+  uint32_t dup_probes_dropped_ = 0u;   // Node-2: repeat detections of the same probe, not echoed
 
   // ── Accumulation buffers ─────────────────────────────────────────────────────
   // Incremental search positions allow each on_rx call to scan only newly added
   // samples, bounding the correlation work to O(nof_samples × PREAMBLE_LEN).
-  std::vector<cf_t>  rx_accum_buf_;         // Bob RX accumulator
-  std::vector<cf_t>  rx_alice_accum_buf_;   // Alice RX accumulator
-  uint32_t           rx_bob_search_pos_   = 0u;
-  uint32_t           rx_alice_search_pos_ = 0u;
+  std::vector<cf_t>  rx_accum_buf_;         // Node-2 RX accumulator
+  std::vector<cf_t>  rx_node1_accum_buf_;   // Node-1 RX accumulator
+  uint32_t           rx_node2_search_pos_   = 0u;
+  uint32_t           rx_node1_search_pos_ = 0u;
   static constexpr uint32_t RX_ACCUM_MAX  = 65536u;
 
   // ── IQ capture ──────────────────────────────────────────────────────────────
   bool     capture_enabled_        = false;
   uint32_t capture_frames_written_ = 0u;
-  FILE*    probe_capture_fp_       = nullptr;   // /tmp/steep_alice_probe.iq
-  FILE*    echo_capture_fp_        = nullptr;   // /tmp/steep_bob_echo.iq
-  FILE*    bob_rx_capture_fp_      = nullptr;   // /tmp/steep_bob_rx.iq
+  FILE*    probe_capture_fp_       = nullptr;   // /tmp/steep_node1_probe.iq
+  FILE*    echo_capture_fp_        = nullptr;   // /tmp/steep_node2_echo.iq
+  FILE*    node2_rx_capture_fp_      = nullptr;   // /tmp/steep_node2_rx.iq
   FILE*    x1_capture_fp_          = nullptr;   // /tmp/steep_x1.iq
   FILE*    s2_capture_fp_          = nullptr;   // /tmp/steep_s2.iq
   FILE*    x1_unit_capture_fp_     = nullptr;   // /tmp/steep_x1_unit.iq

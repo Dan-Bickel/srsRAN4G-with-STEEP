@@ -136,17 +136,17 @@ int enb::init(const all_args_t& args_)
   }
 
   /* OLD
-  // STEEP - Bob configuration
+  // STEEP - Node-2 configuration
   std::vector<uint8_t> secret = {
     'H','e','l','l','o',' ','f','r','o','m',' ','B','o','b','!',
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
   };
   tmp_radio->steep_set_secret(secret);
   */
-  tmp_radio->steep_set_role(false);   // srsenb = Bob
+  tmp_radio->steep_set_role(false);   // srsenb = Node-2
   tmp_radio->steep_enable(true);
 
-  tmp_radio->steep_set_capture(true);   // writes /tmp/steep_bob_echo.iq
+  tmp_radio->steep_set_capture(true);   // writes /tmp/steep_node2_echo.iq
 
   // tmp_radio->steep_set_rng_seed(42);          // fixed seed for reproducible noise
 

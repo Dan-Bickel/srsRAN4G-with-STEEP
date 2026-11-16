@@ -85,6 +85,7 @@ srsue/src/phy/test/nr_sa_cell_search_test: lib/src/phy/libsrsran_phy.a
 srsue/src/phy/test/nr_sa_cell_search_test: lib/src/radio/libsrsran_radio.a
 srsue/src/phy/test/nr_sa_cell_search_test: lib/src/asn1/librrc_nr_asn1.a
 srsue/src/phy/test/nr_sa_cell_search_test: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
+srsue/src/phy/test/nr_sa_cell_search_test: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 srsue/src/phy/test/nr_sa_cell_search_test: lib/src/phy/rf/libsrsran_rf.so.25.10.0
 srsue/src/phy/test/nr_sa_cell_search_test: lib/src/phy/rf/libsrsran_rf_utils.a
 srsue/src/phy/test/nr_sa_cell_search_test: lib/src/asn1/libasn1_utils.a
@@ -94,6 +95,7 @@ srsue/src/phy/test/nr_sa_cell_search_test: /usr/lib/x86_64-linux-gnu/libfftw3f.s
 srsue/src/phy/test/nr_sa_cell_search_test: lib/src/support/libsupport.a
 srsue/src/phy/test/nr_sa_cell_search_test: lib/src/srslog/libsrslog.a
 srsue/src/phy/test/nr_sa_cell_search_test: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+srsue/src/phy/test/nr_sa_cell_search_test: /usr/lib/x86_64-linux-gnu/libsctp.so
 srsue/src/phy/test/nr_sa_cell_search_test: srsue/src/phy/test/CMakeFiles/nr_sa_cell_search_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable nr_sa_cell_search_test"
 	cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsue/src/phy/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nr_sa_cell_search_test.dir/link.txt --verbose=$(VERBOSE)

@@ -85,6 +85,7 @@ lib/test/common/test_security_kdf: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 lib/test/common/test_security_kdf: lib/src/support/libsupport.a
 lib/test/common/test_security_kdf: lib/src/srslog/libsrslog.a
 lib/test/common/test_security_kdf: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+lib/test/common/test_security_kdf: /usr/lib/x86_64-linux-gnu/libsctp.so
 lib/test/common/test_security_kdf: lib/test/common/CMakeFiles/test_security_kdf.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_security_kdf"
 	cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/lib/test/common && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_security_kdf.dir/link.txt --verbose=$(VERBOSE)

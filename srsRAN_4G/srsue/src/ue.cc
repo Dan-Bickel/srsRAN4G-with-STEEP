@@ -161,11 +161,11 @@ int ue::init(const all_args_t& args_)
     ret = SRSRAN_ERROR;
   }
 
-  // STEEP — Alice configuration
+  // STEEP — Node-1 configuration
   lte_radio->steep_set_role(true);
   lte_radio->steep_enable(true);
 
-  lte_radio->steep_set_capture(true);    // write probe IQ to /tmp/steep_alice_probe.iq
+  lte_radio->steep_set_capture(true);    // write probe IQ to /tmp/steep_node1_probe.iq
   // lte_radio->steep_set_rng_seed(0);  // uncomment for non-deterministic noise
 
   // move ownership

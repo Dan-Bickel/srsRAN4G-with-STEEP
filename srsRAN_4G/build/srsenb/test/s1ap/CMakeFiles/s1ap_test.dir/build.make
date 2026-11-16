@@ -93,6 +93,7 @@ srsenb/test/s1ap/s1ap_test: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 srsenb/test/s1ap/s1ap_test: lib/src/support/libsupport.a
 srsenb/test/s1ap/s1ap_test: lib/src/srslog/libsrslog.a
 srsenb/test/s1ap/s1ap_test: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+srsenb/test/s1ap/s1ap_test: /usr/lib/x86_64-linux-gnu/libsctp.so
 srsenb/test/s1ap/s1ap_test: lib/src/asn1/libsrsran_asn1.a
 srsenb/test/s1ap/s1ap_test: srsenb/test/s1ap/CMakeFiles/s1ap_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable s1ap_test"

@@ -88,6 +88,7 @@ srsue/src/stack/mac/test/mac_test: lib/src/radio/libsrsran_radio.a
 srsue/src/stack/mac/test/mac_test: lib/src/asn1/libsrsran_asn1.a
 srsue/src/stack/mac/test/mac_test: lib/src/asn1/librrc_asn1.a
 srsue/src/stack/mac/test/mac_test: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
+srsue/src/stack/mac/test/mac_test: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 srsue/src/stack/mac/test/mac_test: srsue/src/stack/mac_common/libsrsue_mac_common.a
 srsue/src/stack/mac/test/mac_test: lib/src/phy/rf/libsrsran_rf.so.25.10.0
 srsue/src/stack/mac/test/mac_test: lib/src/phy/rf/libsrsran_rf_utils.a
@@ -98,6 +99,7 @@ srsue/src/stack/mac/test/mac_test: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 srsue/src/stack/mac/test/mac_test: lib/src/support/libsupport.a
 srsue/src/stack/mac/test/mac_test: lib/src/srslog/libsrslog.a
 srsue/src/stack/mac/test/mac_test: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+srsue/src/stack/mac/test/mac_test: /usr/lib/x86_64-linux-gnu/libsctp.so
 srsue/src/stack/mac/test/mac_test: srsue/src/stack/mac/test/CMakeFiles/mac_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mac_test"
 	cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsue/src/stack/mac/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mac_test.dir/link.txt --verbose=$(VERBOSE)

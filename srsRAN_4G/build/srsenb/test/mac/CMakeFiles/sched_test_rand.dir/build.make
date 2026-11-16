@@ -87,6 +87,7 @@ srsenb/test/mac/sched_test_rand: srsenb/test/mac/libsched_test_common.a
 srsenb/test/mac/sched_test_rand: lib/src/phy/libsrsran_phy.a
 srsenb/test/mac/sched_test_rand: lib/src/asn1/librrc_asn1.a
 srsenb/test/mac/sched_test_rand: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
+srsenb/test/mac/sched_test_rand: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 srsenb/test/mac/sched_test_rand: srsenb/src/stack/mac/libsrsenb_mac.a
 srsenb/test/mac/sched_test_rand: srsenb/src/stack/mac/common/libsrsenb_mac_common.a
 srsenb/test/mac/sched_test_rand: lib/src/mac/libsrsran_mac.a
@@ -97,6 +98,7 @@ srsenb/test/mac/sched_test_rand: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 srsenb/test/mac/sched_test_rand: lib/src/support/libsupport.a
 srsenb/test/mac/sched_test_rand: lib/src/srslog/libsrslog.a
 srsenb/test/mac/sched_test_rand: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+srsenb/test/mac/sched_test_rand: /usr/lib/x86_64-linux-gnu/libsctp.so
 srsenb/test/mac/sched_test_rand: srsenb/test/mac/CMakeFiles/sched_test_rand.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable sched_test_rand"
 	cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsenb/test/mac && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sched_test_rand.dir/link.txt --verbose=$(VERBOSE)

@@ -116,6 +116,7 @@ srsue/src/test/metrics_test: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 srsue/src/test/metrics_test: lib/src/support/libsupport.a
 srsue/src/test/metrics_test: lib/src/srslog/libsrslog.a
 srsue/src/test/metrics_test: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+srsue/src/test/metrics_test: /usr/lib/x86_64-linux-gnu/libsctp.so
 srsue/src/test/metrics_test: srsue/src/test/CMakeFiles/metrics_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable metrics_test"
 	cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsue/src/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/metrics_test.dir/link.txt --verbose=$(VERBOSE)

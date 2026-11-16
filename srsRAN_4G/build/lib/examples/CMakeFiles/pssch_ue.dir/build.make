@@ -85,6 +85,7 @@ lib/examples/pssch_ue: lib/src/phy/rf/libsrsran_rf.so.25.10.0
 lib/examples/pssch_ue: lib/src/support/libsupport.a
 lib/examples/pssch_ue: lib/src/srslog/libsrslog.a
 lib/examples/pssch_ue: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+lib/examples/pssch_ue: /usr/lib/x86_64-linux-gnu/libsctp.so
 lib/examples/pssch_ue: lib/src/phy/rf/libsrsran_rf_utils.a
 lib/examples/pssch_ue: lib/src/phy/libsrsran_phy.a
 lib/examples/pssch_ue: /usr/lib/x86_64-linux-gnu/libfftw3f.so

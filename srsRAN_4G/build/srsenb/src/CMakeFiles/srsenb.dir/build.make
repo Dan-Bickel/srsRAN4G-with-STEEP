@@ -185,6 +185,7 @@ srsenb/src/srsenb: lib/src/asn1/librrc_nr_asn1.a
 srsenb/src/srsenb: lib/src/asn1/libngap_nr_asn1.a
 srsenb/src/srsenb: lib/src/asn1/libric_e2.a
 srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
+srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
 srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libconfig++.so
 srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libsctp.so
@@ -201,6 +202,7 @@ srsenb/src/srsenb: lib/src/phy/libsrsran_phy.a
 srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 srsenb/src/srsenb: lib/src/support/libsupport.a
 srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+srsenb/src/srsenb: /usr/lib/x86_64-linux-gnu/libsctp.so
 srsenb/src/srsenb: srsenb/src/CMakeFiles/srsenb.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable srsenb"
 	cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/srsenb/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsenb.dir/link.txt --verbose=$(VERBOSE)

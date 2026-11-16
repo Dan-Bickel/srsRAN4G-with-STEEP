@@ -86,6 +86,7 @@ lib/src/phy/channel/test/fading_channel_test: /usr/lib/x86_64-linux-gnu/libmbedc
 lib/src/phy/channel/test/fading_channel_test: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 lib/src/phy/channel/test/fading_channel_test: lib/src/support/libsupport.a
 lib/src/phy/channel/test/fading_channel_test: lib/src/srslog/libsrslog.a
+lib/src/phy/channel/test/fading_channel_test: /usr/lib/x86_64-linux-gnu/libsctp.so
 lib/src/phy/channel/test/fading_channel_test: lib/src/phy/channel/test/CMakeFiles/fading_channel_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable fading_channel_test"
 	cd /home/daniel-linix/Documents/Github-Desktop/srsRAN4G-with-STEEP/srsRAN_4G/build/lib/src/phy/channel/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fading_channel_test.dir/link.txt --verbose=$(VERBOSE)

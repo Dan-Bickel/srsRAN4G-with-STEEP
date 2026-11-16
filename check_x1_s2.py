@@ -23,16 +23,16 @@ def rd(name):
 
 X1 = rd('steep_x1.iq')
 S2 = rd('steep_s2.iq')
-A  = rd('steep_alice_probe.iq')
-R  = rd('steep_bob_rx.iq')
-E  = rd('steep_bob_echo.iq')
+A  = rd('steep_node1_probe.iq')
+R  = rd('steep_node2_rx.iq')
+E  = rd('steep_node2_echo.iq')
 U1 = rd('steep_x1_unit.iq')
 U2 = rd('steep_s2_unit.iq')
 
 print()
 print("x1 real part all zero :", all(np.all(x.real == 0) for x in X1))
 print("s2 real part all zero :", all(np.all(s.real == 0) for s in S2))
-print("x1 == Alice TX Q      :", all(np.array_equal(x.imag, a.imag) for x, a in zip(X1, A)))
+print("x1 == Node-1 TX Q      :", all(np.array_equal(x.imag, a.imag) for x, a in zip(X1, A)))
 print("preambles identical   :", all(np.array_equal(X1[0][:PRE], s[:PRE]) for s in S2))
 
 bad = sum(int(np.sum(np.sign(s[PRE:].imag) != np.sign(e[PRE:FRAME].imag * r.imag)))
